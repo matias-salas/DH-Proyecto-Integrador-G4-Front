@@ -3,10 +3,9 @@ import Navbar from "./Header/Navbar/Navbar"
 import Footer from "./Footer/Footer"
 
 
-
 const Layout = () => {
   return (
-    <div>
+    <div className="body-container">
         <Navbar />
         <Outlet />
         <Footer />
