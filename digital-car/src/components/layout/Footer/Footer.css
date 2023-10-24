@@ -23,4 +23,9 @@
 .icon-media{
     width: 28px;
     margin-right: 25px;
+    margin-top: 10px;
+}
+
+.social-icon{
+    flex-wrap: wrap;
 }
