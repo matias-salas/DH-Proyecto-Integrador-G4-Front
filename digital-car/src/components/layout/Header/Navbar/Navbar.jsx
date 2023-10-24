@@ -1,9 +1,13 @@
-import './Navbar.css';
+import SearchAppBar from "../../../common/Search/SearchAppBar";
+import "./Navbar.css";
 
 const Navbar = () => {
   return (
-    <div className="navbar">Navbar</div>
-  )
-}
+    <div className="navbar-container">
+      <div className="navbar">Navbar</div>
+      <SearchAppBar />
+    </div>
+  );
+};
 
-export default Navbar
+export default Navbar;

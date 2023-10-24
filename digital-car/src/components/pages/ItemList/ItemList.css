@@ -1,0 +1,8 @@
+.cards-container{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 30px;
+    place-content: center;
+    height: 100%;
+    margin: 184px 0 140px 0;
+}

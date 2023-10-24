@@ -1,5 +1,11 @@
+.navbar-container{
+    top: 0;
+    position: fixed;
+
+}
+
 .navbar {
-    height: 12%;
+    height: 120px;
     background-color: var(--color-six);
-    
+    width: 100vw;
 }
