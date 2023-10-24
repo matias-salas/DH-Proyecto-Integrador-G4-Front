@@ -7,11 +7,23 @@ const ItemList = () => {
       <div>
         <SearchAppBar />
       </div>
+      <div>
+        <div>Product Card</div>
+        <div>Product Card</div>
+        <div>Product Card</div>
+        <div>Product Card</div>
+        <div>Product Card</div>
+      </div>
       <div>Product Card</div>
       <div>Product Card</div>
       <div>Product Card</div>
       <div>Product Card</div>
       <div>Product Card</div>
+      <div>Product Card</div>
+      <div>Product Card</div>
+      <div>Product Card</div>
+      <div>Product Card</div>
+      
     </>
   );
 };
