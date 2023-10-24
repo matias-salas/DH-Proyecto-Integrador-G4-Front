@@ -1,7 +1,15 @@
 .footer {
-    height: 13%;
+    height: 140px;
     background-color: var(--color-six);
     position: absolute;
     bottom: 0;
     width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-footer{
+    height: 120px;
+    width: 120px;
 }
