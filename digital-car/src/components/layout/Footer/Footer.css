@@ -6,10 +6,21 @@
     width: 100vw;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+}
+
+.footer div {
+    display: flex;
+    align-items: center;
+    margin-left: 25px;
 }
 
 .logo-footer{
     height: 120px;
     width: 120px;
+}
+
+.icon-media{
+    width: 28px;
+    margin-right: 25px;
 }
