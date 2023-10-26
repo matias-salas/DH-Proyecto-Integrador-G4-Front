@@ -1,5 +1,5 @@
 .footer {
-    height: 140px;
+    height: 110px;
     background-color: var(--color-six);
     width: 100vw;
     display: flex;
@@ -16,8 +16,9 @@
 }
 
 .logo-footer{
-    height: 120px;
-    width: 120px;
+    width: 60px; /* Ajusta el tamaño del logo según sea necesario */
+    height: 60px;
+    margin-right: 10px;
 }
 
 .icon-media{
