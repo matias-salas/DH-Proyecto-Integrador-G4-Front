@@ -1,0 +1,65 @@
+
+.body-container-details{
+    width: 100%;
+    background-color: var(--color-two);
+    height: 100%;
+    justify-content: center;
+    margin: 184px 0 140px 0;
+    display: inline-flex;
+    
+    
+}
+.container-details{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    width: 85%;
+    height: 100%;
+    background-color: var(--color-four);
+}
+.icono-atras{
+    width:2rem;
+    height:2rem;
+    color: white;
+    margin-left: 96%;
+    margin-top: 0.625rem;
+}
+.caracteristicas{
+    
+    width: 50%;
+}
+.caracteristicas h1{
+    font-size: 40px;
+    color: var(--color-six);
+    font-weight: bold;
+    text-align: center;
+}
+.container-imagenes{
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.container-imagenes img{
+    width: 35%;
+    height: 10rem;
+    margin: 1.25rem 2.3rem;
+}
+.contenedor-principal{
+    display: flex;
+   justify-content: space-between;
+   margin: 1rem;
+}
+.img-carro{
+    width: 80%;
+    margin-left: 3.5rem;
+}
+.descripcion{
+    margin: 3rem 7rem 3rem 7rem;
+}
+.descripcion p{
+    
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    color: var(--color-six);
+}

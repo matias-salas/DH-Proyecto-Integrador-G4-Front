@@ -2,9 +2,12 @@ import Layout from "./components/layout/Layout";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { routes } from "./routes/routes";
 
+
 function App() {
   return (
+    
     <BrowserRouter>
+    
         <Routes>
           <Route element={<Layout />}>
             {routes.map(({ id, path, Element }) => (
