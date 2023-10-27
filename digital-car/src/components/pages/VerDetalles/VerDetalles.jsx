@@ -1,8 +1,7 @@
-import React from 'react';
 import "./VerDetalles.css";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faCaretLeft} from "@fortawesome/free-solid-svg-icons";
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 
 
@@ -10,7 +9,6 @@ import { Link, useNavigate } from 'react-router-dom';
 
 const VerDetalles = () => {
 
-  const navegate = useNavigate ()
   return (
     
     <>
