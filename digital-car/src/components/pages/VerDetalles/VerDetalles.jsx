@@ -39,13 +39,46 @@ const VerDetalles = () => {
        </div>
          
          <div className='descripcion'>
-          <p>Descripción</p>
+          <h3>Descripción</h3>
           <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit aut debitis exercitationem doloremque, quis obcaecati! Perspiciatis, facilis quos quaerat officia exercitationem necessitatibus error nobis delectus deleniti porro praesentium enim omnis.</p>
          </div>
-         
+
+      <div className='caracteristicas-extra'>
+        <h3>QUE OFRECE ESTE AUTO?</h3>
+
+        <hr />
+
+        <div className='bloque1'>
+        <div>
+        <i class="fa-solid fa-user"></i>
+      <h4> cantidad de personas: </h4>
+        </div>
+        <div>
+      <h4> caja de cambios: </h4>
+        </div>
+        <div>
+      <h4> airbag: </h4>
+        </div>
+        </div>
+
+        <div className='bloque2'>
+        <div>
+      <h4> cantidad de valijas: </h4>
+        </div>
+        <div>
+      <h4> aire acondicionado: </h4>
+        </div>
+        <div>
+      <h4> frenos ABS: </h4>
+        </div>
+        </div>
+
+
 
       </div>
-    
+      
+      
+      </div>
     </div>
     
     </>

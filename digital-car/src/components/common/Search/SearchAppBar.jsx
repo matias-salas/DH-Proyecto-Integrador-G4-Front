@@ -72,6 +72,7 @@ const SearchAppBar = () => {
           >
             Categorias
           </Typography>
+         
           <Search>
             <SearchIconWrapper>
               <SearchIcon />
