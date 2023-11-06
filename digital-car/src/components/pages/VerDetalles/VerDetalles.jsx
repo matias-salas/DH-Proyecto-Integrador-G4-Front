@@ -1,7 +1,7 @@
 import "./VerDetalles.css";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import { faCaretLeft, faAngleLeft, faAngleRight } from "@fortawesome/free-solid-svg-icons";
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { useState } from "react";
 import Dialog from '@mui/material/Dialog';
 import Slide from '@mui/material/Slide';
@@ -49,7 +49,6 @@ const ImageCarousel = () => {
 const VerDetalles = () => {
   const [open, setOpen] = useState(false);
 
-  const navegate = useNavigate ()
 
 
   const handleOpen = () => {
