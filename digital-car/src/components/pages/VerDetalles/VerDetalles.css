@@ -1,9 +1,5 @@
 
-
-  @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=Raleway:ital,wght@0,300;0,400;0,700;1,100&family=Roboto+Mono:ital,wght@0,400;0,600;1,700&display=swap');
-
-  @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,400;0,600;1,700&family=Roboto:wght@300&display=swap');
-
+  @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400;500;600;700&family=Roboto+Mono:ital,wght@0,400;0,600;1,700&family=Roboto:wght@100;400;500;700&display=swap');
 
 .body-container-details{
     width: 100%;
@@ -12,67 +8,80 @@
     justify-content: center;
     margin: 184px 0 140px 0;
     display: inline-flex;
-    
-    
+
+
 }
-.container-details{
+
+.container-details {
     margin-top: 2rem;
     margin-bottom: 2rem;
     width: 85%;
     height: 100%;
     background-color: var(--color-four);
 }
-.icono-atras{
-    width:2rem;
-    height:2rem;
+
+.icono-atras {
+    width: 2rem;
+    height: 2rem;
     color: white;
     margin-left: 96%;
     margin-top: 0.625rem;
 }
-.caracteristicas{
-    
+
+.caracteristicas {
+
     width: 50%;
 }
-.caracteristicas h1{
+
+.caracteristicas h1 {
     font-size: 40px;
     font-family: 'Chakra Petch', sans-serif;
     color: var(--color-six);
     font-weight: bold;
     text-align: center;
 }
-.container-imagenes{
+
+.container-imagenes {
     width: 50%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
 }
-.container-imagenes img{
+
+.container-imagenes img {
     width: 35%;
     height: 10rem;
     margin: 1.25rem 2.3rem;
 }
-.contenedor-principal{
+
+.contenedor-principal {
     display: flex;
-   justify-content: space-between;
-   margin: 1rem;
+    justify-content: space-between;
+    margin: 1rem;
 }
-.img-carro{
+
+.img-carro {
     width: 80%;
     margin-left: 3.5rem;
 }
-.descripcion{
+
+.descripcion {
     margin: 3rem 7rem 3rem 7rem;
     font-family: 'Roboto', sans-serif;
 }
-.descripcion h3{
-    
-    font-size: 1.25rem;
+.descripcion h2 {
     font-family: 'Chakra Petch', sans-serif;
-    text-transform: uppercase;
     color: var(--color-six);
 }
 
+.descripcion p {
+
+    font-size: 1.25rem;
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    color: var(--color-six);
+}
 .caracteristicas h3{
     font-family: 'Chakra Petch', sans-serif;
     margin: 3rem 7rem 3rem 7rem;
@@ -100,8 +109,109 @@
     justify-content: space-around;
 
 }
+.icon{
+    display: flex;
+ }
+
+.bloque1 i{
+   margin-top: 20px;
+   margin-right: 10px;
+}
+
 .bloque2{
     display: flex;
     justify-content: space-around;
 
+}
+.bloque2 i{
+    margin-top: 20px;
+    margin-right: 10px;
+ }
+
+
+.arrow {
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    transition:  0.3s;
+}
+
+.arrow:hover {
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.arrow-prev {
+    left: 25px;
+    z-index: 1;
+}
+
+.arrow-next {
+    right: 25px;
+    z-index: 1;
+}
+
+.carousel-container {
+    position: relative;
+}
+
+
+.carousel-container img {
+    max-height: 100vh;
+    max-width: 100%;
+    margin: auto;
+    display: block;
+}
+
+.carousel-container .slick-dots {
+    bottom: 10px;
+}
+
+.carousel-container .slick-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.carousel-container button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+}
+
+
+.carousel-close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+}
+
+
+
+.btn-ver-mas {
+    background-color: #c0b0c9;
+    /* Color de fondo */
+    color: #FFFFFF;
+    /* Color del texto */
+    padding: 10px 20px;
+    /* Espaciado interior del botón */
+    border: none;
+    /* Sin borde */
+    border-radius: 5px;
+    /* Esquinas redondeadas */
+    cursor: pointer;
+    /* Cambia el cursor al pasar el mouse */
+    transition: background-color 0.3s;
+    /* Transición suave al cambiar de color */
+}
+
+.btn-ver-mas:hover {
+    background-color: #876797;
+    /* Color de fondo al pasar el mouse */
 }

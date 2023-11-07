@@ -10,12 +10,12 @@ export const products = [
     },
     {
         id: 2,
-        title: "Fiat",
-        model: "Cronos",
+        title: "Renault",
+        model: "Duster",
         type: "Sedan",
-        price: 3000,
+        price: 2000,
         year: 2019,
-        img: "https://images.prd.kavak.io/eyJidWNrZXQiOiJrYXZhay1pbWFnZXMiLCJrZXkiOiJpbWFnZXMvMjc5OTYwL0VYVEVSSU9SLWZyb250U2lkZVBpbG90TmVhci0xNjk2NDM4NDU0MzEzLmpwZWciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjgxMCwiaGVpZ2h0Ijo0NjV9fX0="
+        img: "https://images.prd.kavak.io/eyJidWNrZXQiOiJrYXZhay1pbWFnZXMiLCJrZXkiOiJpbWFnZXMvMjgzMzg4L0VYVEVSSU9SLWZyb250U2lkZVBpbG90TmVhci0xNjk4MTU4MTE5NDc2LmpwZWciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjY3NSwiaGVpZ2h0IjozODh9fX0="
     },
     {
         id: 3,
