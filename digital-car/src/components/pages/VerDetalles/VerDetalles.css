@@ -100,10 +100,12 @@
 }
 .caracteristicas-extra h3{
     font-family: 'Chakra Petch', sans-serif;
-    margin: 3rem 3rem 1rem 7rem;
+    margin: 3rem 3rem 1rem 3rem;
     color: var(--color-six);
     
 }
+
+
  .bloque1{
     display: flex;
     justify-content: space-around;
@@ -116,6 +118,12 @@
 .bloque1 i{
    margin-top: 20px;
    margin-right: 10px;
+}
+
+.atributo{
+    margin-top: 23x;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .bloque2{
@@ -214,4 +222,14 @@
 .btn-ver-mas:hover {
     background-color: #876797;
     /* Color de fondo al pasar el mouse */
+}
+
+@media (max-width: 600px){
+    .caracteristicas-extra h4{
+       display: none;
+    }
+    .caracteristicas-extra i{
+        font-size: 24px;
+    }
+    
 }
