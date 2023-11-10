@@ -10,10 +10,13 @@ import IconButton from '@mui/material/IconButton';
 import CloseIcon from '@mui/icons-material/Close';
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
+import useFetchID from "../../hooks/useFetchID";
+import { products } from "../../../productsMock";
 
 
 const Arrow = (props) => {
   const { direction, onClick } = props;
+
   return (
       <button className={`arrow arrow-${direction}`} onClick={onClick}>
           <FontAwesomeIcon icon={direction === 'prev' ? faAngleLeft : faAngleRight} size="2x" />
@@ -49,7 +52,7 @@ const ImageCarousel = () => {
 
 const VerDetalles = () => {
   const [open, setOpen] = useState(false);
-
+  const { productSelected } = useFetchID({}, products);
 
 
   const handleOpen = () => {
@@ -74,9 +77,9 @@ const VerDetalles = () => {
         <div className='contenedor-principal'>
 
           <div className='caracteristicas'>
-            <h1 className='tittle-year'>Toyota Prius 2021 </h1> 
-            <h1 className='price'> $ 30000</h1>
-            <img src="https://images.prd.kavak.io/eyJidWNrZXQiOiJrYXZhay1pbWFnZXMiLCJrZXkiOiJpbWFnZXMvMjY1NDM0L0VYVEVSSU9SLWZyb250U2lkZVBpbG90TmVhci0xNjkyMzcwODI1MzM5LmpwZWciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjgxMCwiaGVpZ2h0Ijo0NjV9fX0=" alt="carroPrincipal" className='img-carro' />
+            <h1 className='tittle-year'>{productSelected.title}</h1> 
+            <h1 className='price'> {productSelected.price}</h1>
+            <img src={productSelected.img}  alt="carroPrincipal" className='img-carro' />
 
             <div className='descripcion'>
              <h2>Descripción</h2>

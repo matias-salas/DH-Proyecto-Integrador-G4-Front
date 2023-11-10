@@ -3,7 +3,7 @@ export const products = [
         id: 1,
         title: "Fiat",
         model: "Cronos",
-        type: "Sedan",
+        type: "sedan",
         price: 3000,
         year: 2019,
         img: "https://images.prd.kavak.io/eyJidWNrZXQiOiJrYXZhay1pbWFnZXMiLCJrZXkiOiJpbWFnZXMvMjc5OTYwL0VYVEVSSU9SLWZyb250U2lkZVBpbG90TmVhci0xNjk2NDM4NDU0MzEzLmpwZWciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjgxMCwiaGVpZ2h0Ijo0NjV9fX0="
@@ -12,7 +12,7 @@ export const products = [
         id: 2,
         title: "Renault",
         model: "Duster",
-        type: "Sedan",
+        type: "hatchback",
         price: 2000,
         year: 2019,
         img: "https://images.prd.kavak.io/eyJidWNrZXQiOiJrYXZhay1pbWFnZXMiLCJrZXkiOiJpbWFnZXMvMjgzMzg4L0VYVEVSSU9SLWZyb250U2lkZVBpbG90TmVhci0xNjk4MTU4MTE5NDc2LmpwZWciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjY3NSwiaGVpZ2h0IjozODh9fX0="
@@ -21,7 +21,7 @@ export const products = [
         id: 3,
         title: "Jeep",
         model: "Cronos",
-        type: "Sedan",
+        type: "minivan",
         price: 3000,
         year: 2019,
         img: "https://images.prd.kavak.io/eyJidWNrZXQiOiJrYXZhay1pbWFnZXMiLCJrZXkiOiJpbWFnZXMvMjc5OTYwL0VYVEVSSU9SLWZyb250U2lkZVBpbG90TmVhci0xNjk2NDM4NDU0MzEzLmpwZWciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjgxMCwiaGVpZ2h0Ijo0NjV9fX0="
@@ -30,7 +30,7 @@ export const products = [
         id: 4,
         title: "Fiat",
         model: "Cronos",
-        type: "Sedan",
+        type: "coupe",
         price: 3000,
         year: 2019,
         img: "https://images.prd.kavak.io/eyJidWNrZXQiOiJrYXZhay1pbWFnZXMiLCJrZXkiOiJpbWFnZXMvMjc5OTYwL0VYVEVSSU9SLWZyb250U2lkZVBpbG90TmVhci0xNjk2NDM4NDU0MzEzLmpwZWciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjgxMCwiaGVpZ2h0Ijo0NjV9fX0="
@@ -39,7 +39,7 @@ export const products = [
         id: 5,
         title: "Fiat",
         model: "Cronos",
-        type: "Sedan",
+        type: "van",
         price: 3000,
         year: 2019,
         img: "https://images.prd.kavak.io/eyJidWNrZXQiOiJrYXZhay1pbWFnZXMiLCJrZXkiOiJpbWFnZXMvMjc5OTYwL0VYVEVSSU9SLWZyb250U2lkZVBpbG90TmVhci0xNjk2NDM4NDU0MzEzLmpwZWciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjgxMCwiaGVpZ2h0Ijo0NjV9fX0="
@@ -48,7 +48,7 @@ export const products = [
         id: 6,
         title: "Fiat",
         model: "Cronos",
-        type: "Sedan",
+        type: "pick up",
         price: 3000,
         year: 2019,
         img: "https://images.prd.kavak.io/eyJidWNrZXQiOiJrYXZhay1pbWFnZXMiLCJrZXkiOiJpbWFnZXMvMjc5OTYwL0VYVEVSSU9SLWZyb250U2lkZVBpbG90TmVhci0xNjk2NDM4NDU0MzEzLmpwZWciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjgxMCwiaGVpZ2h0Ijo0NjV9fX0="
@@ -57,7 +57,7 @@ export const products = [
         id: 7,
         title: "Fiat",
         model: "Cronos",
-        type: "Sedan",
+        type: "suv",
         price: 3000,
         year: 2019,
         img: "https://images.prd.kavak.io/eyJidWNrZXQiOiJrYXZhay1pbWFnZXMiLCJrZXkiOiJpbWFnZXMvMjc5OTYwL0VYVEVSSU9SLWZyb250U2lkZVBpbG90TmVhci0xNjk2NDM4NDU0MzEzLmpwZWciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjgxMCwiaGVpZ2h0Ijo0NjV9fX0="
@@ -66,7 +66,7 @@ export const products = [
         id: 8,
         title: "Fiat",
         model: "Cronos",
-        type: "Sedan",
+        type: "suv",
         price: 3000,
         year: 2019,
         img: "https://images.prd.kavak.io/eyJidWNrZXQiOiJrYXZhay1pbWFnZXMiLCJrZXkiOiJpbWFnZXMvMjc5OTYwL0VYVEVSSU9SLWZyb250U2lkZVBpbG90TmVhci0xNjk2NDM4NDU0MzEzLmpwZWciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjgxMCwiaGVpZ2h0Ijo0NjV9fX0="
@@ -75,7 +75,7 @@ export const products = [
         id: 9,
         title: "Fiat",
         model: "Cronos",
-        type: "Sedan",
+        type: "sedan",
         price: 3000,
         year: 2019,
         img: "https://images.prd.kavak.io/eyJidWNrZXQiOiJrYXZhay1pbWFnZXMiLCJrZXkiOiJpbWFnZXMvMjc5OTYwL0VYVEVSSU9SLWZyb250U2lkZVBpbG90TmVhci0xNjk2NDM4NDU0MzEzLmpwZWciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjgxMCwiaGVpZ2h0Ijo0NjV9fX0="
@@ -84,7 +84,7 @@ export const products = [
         id: 10,
         title: "Fiat",
         model: "Cronos",
-        type: "Sedan",
+        type: "sedan",
         price: 3000,
         year: 2019,
         img: "https://images.prd.kavak.io/eyJidWNrZXQiOiJrYXZhay1pbWFnZXMiLCJrZXkiOiJpbWFnZXMvMjc5OTYwL0VYVEVSSU9SLWZyb250U2lkZVBpbG90TmVhci0xNjk2NDM4NDU0MzEzLmpwZWciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjgxMCwiaGVpZ2h0Ijo0NjV9fX0="

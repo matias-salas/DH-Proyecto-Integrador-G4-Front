@@ -11,7 +11,7 @@ const ProductCard = ({ element }) => {
           <p>${element.price}</p>
           <p>{element.title}</p>
         </div>
-        <Link to={"/verDetalle"}>
+        <Link to={`/verDetalle/${element.id}`}>
          <button >
           Ver detalles
           </button> 

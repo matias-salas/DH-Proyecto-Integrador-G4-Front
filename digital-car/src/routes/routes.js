@@ -8,9 +8,18 @@ export const routes = [
         Element: ItemListContainer
     },
     {
+        id: "types",
+        path: "/type/:categoryName",
+        Element: ItemListContainer
+    },
+    {
         id: "verDetalle",
         path: "/verDetalle",
         Element: VerDetalles
     },
-    
+    {
+        id: "verDetalleID",
+        path: "/verDetalle/:id",
+        Element: VerDetalles
+    }
 ]

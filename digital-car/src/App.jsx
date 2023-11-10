@@ -1,6 +1,7 @@
 import Layout from "./components/layout/Layout";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { routes } from "./routes/routes";
+import PanelAdmin from "./components/pages/PanelAdmin/PanelAdmin";
 
 
 function App() {
@@ -9,6 +10,9 @@ function App() {
     <BrowserRouter>
     
         <Routes>
+          <Route path="/panelAdmin" element={<PanelAdmin />}>
+
+          </Route>
           <Route element={<Layout />}>
             {routes.map(({ id, path, Element }) => (
               <Route key={id} path={path} element={<Element />} />
