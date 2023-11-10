@@ -123,18 +123,21 @@ const VerDetalles = () => {
         <FontAwesomeIcon icon={faUser}  />
         </i>
       <h4> cantidad de personas: </h4>
+      <h5 className="atributo">5</h5>
         </div>
         <div className="icon">
         <i class="fa-solid fa-user">
         <FontAwesomeIcon icon={faCar}  />
         </i>
       <h4> caja de cambios: </h4>
+      <h5 className="atributo">Automatico</h5>
         </div>
         <div className="icon">
         <i class="fa-solid fa-user">
         <FontAwesomeIcon icon={faShieldHalved}  />
         </i>
       <h4> airbag: </h4>
+      <h5 className="atributo">Si</h5>
         </div>
         </div>
 
@@ -144,22 +147,23 @@ const VerDetalles = () => {
         <FontAwesomeIcon icon={faSuitcase}  />
         </i>
       <h4> cantidad de valijas: </h4>
+      <h5 className="atributo">3</h5>
         </div>
         <div className="icon">
         <i class="fa-solid fa-user">
         <FontAwesomeIcon icon={faSnowflake}  />
         </i>
       <h4> aire acondicionado: </h4>
+      <h5 className="atributo">Si</h5>
         </div>
         <div className="icon">
         <i class="fa-solid fa-user">
         <FontAwesomeIcon icon={faGear}  />
         </i>
       <h4> frenos ABS: </h4>
+      <h5 className="atributo">Si</h5>
         </div>
         </div>
-
-
 
       </div>
       

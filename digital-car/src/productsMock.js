@@ -19,7 +19,7 @@ export const products = [
     },
     {
         id: 3,
-        title: "Fiat",
+        title: "Jeep",
         model: "Cronos",
         type: "Sedan",
         price: 3000,

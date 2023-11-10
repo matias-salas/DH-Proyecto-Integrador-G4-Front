@@ -2,7 +2,7 @@ import { Outlet } from "react-router-dom"
 import Navbar from "./Header/Navbar/Navbar"
 import Footer from "./Footer/Footer"
 import './Layout.css'
-import VerDetalles from "../pages/VerDetalles/VerDetalles"
+
 
 
 const Layout = () => {

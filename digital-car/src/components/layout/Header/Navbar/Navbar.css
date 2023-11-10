@@ -60,5 +60,6 @@
 .navbar {
     height: 120px;
     background-color: var(--color-six);
-    width: 100vw;
-} */
+    width: 100%;
+    
+}
