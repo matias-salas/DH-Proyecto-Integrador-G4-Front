@@ -51,8 +51,8 @@
 
 .container-imagenes img {
     width: 35%;
-    height: 10rem;
-    margin: 1.25rem 2.3rem;
+    height: 35%;
+    margin: 5% 5%;
 }
 
 .contenedor-principal {
@@ -67,7 +67,8 @@
 }
 
 .descripcion {
-    margin: 3rem 7rem 3rem 7rem;
+    margin: 5% 5%;
+    text-align: center;
     font-family: 'Roboto', sans-serif;
 }
 .descripcion h2 {
@@ -215,3 +216,37 @@
     background-color: #876797;
     /* Color de fondo al pasar el mouse */
 }
+
+@media screen  and (max-width: 760px){
+    .caracteristicas{
+        width: 80%;
+    }
+    .container-imagenes{
+        justify-content: center;
+    }
+    .container-imagenes img{
+      flex-basis: calc(70% - 16px);
+      grid-gap: 30px;
+      height: 20%;
+    }
+  }
+
+  @media screen and (max-width:425px) {
+    .container-imagenes img{
+        flex-basis: calc(100% - 16px);
+    }
+    .caracteristicas h1{
+        font-size: 150%;
+    }
+    .descripcion p {
+        font-size: 80%;
+    }
+    .img-carro{
+        margin: 7.5%;
+    }
+    .caracteristicas-extra h3{
+        margin: 10%;
+        text-align: center;
+        font-size: 95%;
+    }
+  }

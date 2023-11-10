@@ -76,9 +76,17 @@ const VerDetalles = () => {
           <div className='caracteristicas'>
             <h1 className='tittle-year'>Toyota Prius 2021 </h1> 
             <h1 className='price'> $ 30000</h1>
-            <img src="https://images.prd.kavak.io/eyJidWNrZXQiOiJrYXZhay1pbWFnZXMiLCJrZXkiOiJpbWFnZXMvMjY1NDM0L0VYVEVSSU9SLWZyb250U2lkZVBpbG90TmVhci0xNjkyMzcwODI1MzM5LmpwZWciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjgxMCwiaGVpZ2h0Ijo0NjV9fX0=" alt="carroPrincipal" className='img-carro' 
+            <img src="https://images.prd.kavak.io/eyJidWNrZXQiOiJrYXZhay1pbWFnZXMiLCJrZXkiOiJpbWFnZXMvMjY1NDM0L0VYVEVSSU9SLWZyb250U2lkZVBpbG90TmVhci0xNjkyMzcwODI1MzM5LmpwZWciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjgxMCwiaGVpZ2h0Ijo0NjV9fX0=" alt="carroPrincipal" className='img-carro' />
+
+            <div className='descripcion'>
+             <h2>Descripción</h2>
+             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>
+             <button className="btn-ver-mas" onClick={handleOpen}>Ver mas</button>
+           </div>
+
+           
+
             
-            />
           </div>
 
           <Dialog
@@ -102,11 +110,7 @@ const VerDetalles = () => {
 
        </div>
          
-         <div className='descripcion'>
-          <h2>Descripción</h2>
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit aut debitis exercitationem doloremque, quis obcaecati! Perspiciatis, facilis quos quaerat officia exercitationem necessitatibus error nobis delectus deleniti porro praesentium enim omnis.</p>
-          <button className="btn-ver-mas" onClick={handleOpen}>Ver mas</button>
-         </div>
+         
 
       <div className='caracteristicas-extra'>
         <h3>QUE OFRECE ESTE AUTO?</h3>

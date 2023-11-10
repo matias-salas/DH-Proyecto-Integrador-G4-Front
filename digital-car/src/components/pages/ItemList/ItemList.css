@@ -1,6 +1,7 @@
 .cards-container{
-    display: grid;
-    grid-template-columns: auto auto;
+    display: flex;
+    flex-wrap: wrap;
+    /* grid-template-columns: auto auto; */
     grid-gap: 30px;
     place-content: center;
     height: 100%;

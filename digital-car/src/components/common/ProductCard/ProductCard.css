@@ -1,15 +1,17 @@
 
   .product-card {
-    width: 240px;
+    /* width: 240px; */
     height: 328px;
     margin-top: 20px;
     border-radius: 20px;
     border: 1px solid var(--color-one);
+    flex-basis: calc(35% - 16px);
+    margin: 3%;
   }
   
   
   .product-card img {
-    width: 240px;
+    width: 100%;
     height: 240px;
     border-radius: 20px 20px 0 0 ;
     object-fit: cover;
@@ -59,4 +61,18 @@
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
   }
   
+@media screen  and (max-width: 670px){
+  .product-card{
+    flex-basis: calc(70% - 16px);
+  }
+}
+@media screen and (max-width: 380px) {
+  .company-slogan{
+    display: none;
+  }
+  .footer div span{
+    display: none;
+  }
   
+}
+ 
