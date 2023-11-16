@@ -22,6 +22,7 @@
     justify-content: space-between;
     margin: 6px 10px;
     align-items: center;
+    font-family: 'Chakra Petch', sans-serif;
   }
   
   .product-infor div p:nth-child(1) {

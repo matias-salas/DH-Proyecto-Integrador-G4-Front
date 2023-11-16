@@ -49,6 +49,24 @@
     border-radius: 4px;
     cursor: pointer;
   }
+
+  .user{
+    display: none;
+  }
+
+  @media (max-width: 600px){
+    .right-content{
+       display: none;
+    }
+   .user{
+    display: block;
+    font-size: 24px;
+    margin-right: 30px;
+    margin-top: 5px;
+    color: var(--color-three);
+   }
+    
+  }
 /* .navbar-container{
     top: 0;
     position: fixed ;

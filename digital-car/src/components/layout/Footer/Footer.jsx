@@ -14,22 +14,22 @@ const Footer = () => {
         </div>
         <div className="social-icon">
           <img
-            src="./images/ico-facebook.png"
+            src="/images/ico-facebook.png"
             alt="facebook"
             className="icon-media"
           />
           <img
-            src="./images/ico-instagram.png"
+            src="/images/ico-instagram.png"
             alt="instagram"
             className="icon-media"
           />
           <img
-            src="./images/ico-tiktok.png"
+            src="/images/ico-tiktok.png"
             alt="tiktok"
             className="icon-media"
           />
           <img
-            src="./images/ico-whatsapp.png"
+            src="/images/ico-whatsapp.png"
             alt="whatsapp"
             className="icon-media"
           />
