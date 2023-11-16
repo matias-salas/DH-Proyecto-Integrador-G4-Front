@@ -11,7 +11,7 @@ const Navbar = () => {
         <div className="left-content">
           <Link to="/" className="logo-link">
             <img src="/images/logoDC.png" alt="Logo" className="logo-image" /> 
-            <span className="company-slogan">Lema de la empresa</span>
+            <span className="company-slogan">Tu viaje, tu auto, tu libertad!</span>
           </Link>
         </div>
         <div className="right-content">
