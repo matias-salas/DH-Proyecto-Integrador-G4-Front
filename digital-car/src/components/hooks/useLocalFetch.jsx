@@ -13,7 +13,7 @@ export const useLocalFetch = (initial, list) => {
     const fetchProduct = new Promise((resolve) => {
       setTimeout(() => {
         resolve(categoryName ? productosFiltrados : list);
-      }, 1000);
+      }, 100);
     });
 
     fetchProduct
