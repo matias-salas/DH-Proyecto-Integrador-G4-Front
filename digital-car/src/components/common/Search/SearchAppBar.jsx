@@ -10,6 +10,7 @@ import SearchIcon from "@mui/icons-material/Search";
 import { useState } from "react";
 import Drawer from "@mui/material/Drawer";
 import { Link } from "react-router-dom";
+import './SearchAppBar.css';
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -77,7 +78,7 @@ const SearchAppBar = () => {
         position="static"
         style={{ backgroundColor: "var(--color-four)" }}
       >
-        <Toolbar>
+        <Toolbar className="search">
           <IconButton
             onClick={toggleDrawer("left", true)}
             size="large"
@@ -85,6 +86,7 @@ const SearchAppBar = () => {
             color="inherit"
             aria-label="open drawer"
             sx={{ mr: 2 }}
+            className="burguer"
           >
             <MenuIcon />
           </IconButton>
@@ -123,11 +125,11 @@ const SearchAppBar = () => {
             noWrap
             component="div"
             sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
-          >
+          className="category">
             Categorias
           </Typography>
 
-          <Search>
+          <Search className="buscador">
             <SearchIconWrapper>
               <SearchIcon />
             </SearchIconWrapper>
