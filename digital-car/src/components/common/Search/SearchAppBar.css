@@ -1,12 +1,12 @@
 .category, .burguer {
-    display: none;
+    display: none !important;
 }
 
 .buscador {
-    width: 660px;
+    width: 660px !important;
 }
 
 .search {
-    display: flex;
-    justify-content: center;
+    display: flex !important;
+    justify-content: center !important;
 }
