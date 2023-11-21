@@ -3,8 +3,13 @@ import SearchAppBar from "../../../common/Search/SearchAppBar";
 import "./Navbar.css";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import { faUser} from "@fortawesome/free-solid-svg-icons";
+import DateRangePicker from '../../../daterangepicker/DateRangePicker';
+
+
+
 
 const Navbar = () => {
+
   return (
     <header className="navbar-container">
       <div className="navbar">
@@ -25,6 +30,7 @@ const Navbar = () => {
         </div>
       </div>
       <SearchAppBar />
+      
     </header>
   );
 };
