@@ -4,6 +4,7 @@ import { routes } from "./routes/routes";
 import PanelAdmin from "./components/pages/PanelAdmin/PanelAdmin";
 
 
+
 function App() {
   return (
     
@@ -20,6 +21,7 @@ function App() {
           </Route>
           <Route path="*" element={<h1>404 not found</h1>} />
         </Routes>
+        
     </BrowserRouter>
   );
 }

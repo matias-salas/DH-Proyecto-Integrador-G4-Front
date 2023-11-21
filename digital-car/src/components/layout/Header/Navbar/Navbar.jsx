@@ -7,7 +7,6 @@ import DateRangePicker from '../../../daterangepicker/DateRangePicker';
 
 
 
-
 const Navbar = () => {
 
   return (
