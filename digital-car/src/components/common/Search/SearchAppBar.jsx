@@ -80,7 +80,7 @@ const SearchAppBar = () => {
         position="static"
         style={{ backgroundColor: "var(--color-four)" }}
       >
-        <Toolbar>
+        <Toolbar className="search">
           <IconButton
             onClick={toggleDrawer("left", true)}
             size="large"
@@ -88,6 +88,7 @@ const SearchAppBar = () => {
             color="inherit"
             aria-label="open drawer"
             sx={{ mr: 2 }}
+            className="burguer"
           >
             <MenuIcon />
           </IconButton>
@@ -96,25 +97,25 @@ const SearchAppBar = () => {
             open={state["left"]}
             onClose={toggleDrawer("left", false)}
           >
-            <Link to="/type/suv" style={{ textDecoration: "none" , color: "inherit"}}>
+            <Link to="/type/Suv" style={{ textDecoration: "none" , color: "inherit"}}>
               Suv
             </Link>
-            <Link to="/type/pickup" style={{ textDecoration: "none", color: "inherit" }}>
+            <Link to="/type/Pickup" style={{ textDecoration: "none", color: "inherit" }}>
               Pick Up
             </Link>
-            <Link to="/type/van" style={{ textDecoration: "none" , color: "inherit"}}>
+            <Link to="/type/Van" style={{ textDecoration: "none" , color: "inherit"}}>
               Van
             </Link>
-            <Link to="/type/coupe" style={{ textDecoration: "none", color: "inherit" }}>
+            <Link to="/type/Coupe" style={{ textDecoration: "none", color: "inherit" }}>
               Coupe
             </Link>
-            <Link to="/type/sedan" style={{ textDecoration: "none" , color: "inherit"}}>
+            <Link to="/type/Sedan" style={{ textDecoration: "none" , color: "inherit"}}>
               Sedan
             </Link>
-            <Link to="/type/minivan" style={{ textDecoration: "none" , color: "inherit"}}>
+            <Link to="/type/Minivan" style={{ textDecoration: "none" , color: "inherit"}}>
               Minivan
             </Link>
-            <Link to="/type/hatchback" style={{ textDecoration: "none" , color: "inherit"}}>
+            <Link to="/type/Hatchback" style={{ textDecoration: "none" , color: "inherit"}}>
               Hatchback
             </Link>
             <Link to="/" style={{ textDecoration: "none", color: "inherit" }}>
@@ -126,11 +127,11 @@ const SearchAppBar = () => {
             noWrap
             component="div"
             sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
-          >
+          className="category">
             Categorias
           </Typography>
 
-          <Search>
+          <Search className="buscador">
             <SearchIconWrapper>
               <SearchIcon />
             </SearchIconWrapper>

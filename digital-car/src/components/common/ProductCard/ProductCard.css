@@ -22,7 +22,7 @@
     justify-content: space-between;
     margin: 6px 10px;
     align-items: center;
-    font-family: 'Chakra Petch', sans-serif;
+    
   }
   
   .product-infor div p:nth-child(1) {
@@ -37,29 +37,30 @@
     font-size: var(--sm);
     margin-top: 10px;
     margin-bottom: 10px;
-    color: var(--color-one);
+    color: var(--color-three);
   }
   .product-infor button{
     font-size: var(--sm);
     font-weight: bold;
-    margin-top: 10%;
+    margin-top: 10px;
     margin-bottom: 10px;
     background-color: var(--color-five);
-    border-radius: 13px;
+    border-radius: 9px;
     color: var(--color-three);
     border: 1px solid var(--color-one);
     height: 42px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.5s;
+    transition: color 0.3s;
     text-decoration: none;
    
   }
   .product-infor button:hover{
     background-color: var(--color-three);
-    color: var(--withe);
+    color: white;
     cursor: pointer;
     text-decoration: none;
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    box-shadow: 0 12px 12px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
   }
   
 @media screen  and (max-width: 670px){
