@@ -3,13 +3,13 @@ import ItemList from "./ItemList";
 import { products } from "../../../productsMock";
 import { BounceLoader } from "react-spinners";
 
-const ItemListContainer = () => {
+const ItemListContainer = ({ handleBack }) => {
   const { items } = useLocalFetch([], products);
 
   return (
     <div>
       {items.length > 0 ? (
-        <ItemList prod={items} />
+        <ItemList prod={items} handleBack={handleBack} />
       ) : (
         <BounceLoader
           color="var(--color-six)"

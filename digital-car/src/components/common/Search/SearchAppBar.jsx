@@ -10,8 +10,7 @@ import SearchIcon from "@mui/icons-material/Search";
 import { useState } from "react";
 import Drawer from "@mui/material/Drawer";
 import { Link } from "react-router-dom";
-import * as React from 'react';
-
+import './SearchAppBar.css'; 
 
 
 const Search = styled("div")(({ theme }) => ({

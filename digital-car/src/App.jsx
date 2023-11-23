@@ -2,6 +2,8 @@ import Layout from "./components/layout/Layout";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { routes } from "./routes/routes";
 import PanelAdmin from "./components/pages/PanelAdmin/PanelAdmin";
+import CrearCuenta from "./components/pages/CrearCuenta/CrearCuenta";
+
 
 
 function App() {
@@ -19,7 +21,9 @@ function App() {
             ))}
           </Route>
           <Route path="*" element={<h1>404 not found</h1>} />
+          <Route path="/crearCuenta" element={<CrearCuenta />}></Route>
         </Routes>
+        
     </BrowserRouter>
   );
 }

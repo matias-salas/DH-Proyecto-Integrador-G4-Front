@@ -7,11 +7,10 @@ import DateRangeComp from '../../../daterangepicker/DateRange';
 import "./Navbar.css"
 
 
-
 const Navbar = () => {
 
   return (
-    <header className="navbar-container">
+    <header className="navbar-container" style={{ zIndex: 1000 }}>
       <div className="navbar">
         <div className="left-content">
           <Link to="/" className="logo-link">
@@ -20,7 +19,8 @@ const Navbar = () => {
           </Link>
         </div>
         <div className="right-content">
-          <button className="nav-button">Crear cuenta</button>
+          <Link to={"/crearCuenta"}><button className="nav-button">Crear cuenta</button></Link>
+          
           <button className="nav-button">Iniciar sesión</button>
         </div>
         <div className='user'>
