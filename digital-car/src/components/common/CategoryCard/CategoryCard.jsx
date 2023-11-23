@@ -6,6 +6,7 @@ const CategoryCard = ({ element }) => {
     <Link
       to={`/type/${element.type}`}
       style={{ textDecoration: "none", color: "inherit" }}
+      
     >
       <div className="cat-card">
         <img src={element.img} alt="category" className="cat-img" />

@@ -2,8 +2,8 @@ import { Link } from 'react-router-dom';
 import SearchAppBar from "../../../common/Search/SearchAppBar";
 import "./Navbar.css";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import { faUser, faCalendarAlt} from "@fortawesome/free-solid-svg-icons";
-import DateRangeComp from '../../../daterangepicker/DateRange';
+import { faUser } from "@fortawesome/free-solid-svg-icons";
+
 import "./Navbar.css"
 
 
@@ -30,13 +30,13 @@ const Navbar = () => {
         </div>
       </div>
       <SearchAppBar />
-      <div className='App'>
-        <h4 className='h4' > Fecha Retiro/Devolucion </h4>
+      {/* <div className='App'>
+        <h4 className='h4' >Fecha Retiro/Devolucion</h4>
         <i className="calendar">
         <FontAwesomeIcon icon={faCalendarAlt}  />
         </i>
        <DateRangeComp/>
-      </div>
+      </div> */}
     </header>
   );
 };
