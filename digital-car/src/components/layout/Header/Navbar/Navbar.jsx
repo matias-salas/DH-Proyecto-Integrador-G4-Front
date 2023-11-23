@@ -20,8 +20,9 @@ const Navbar = () => {
         </div>
         <div className="right-content">
           <Link to={"/crearCuenta"}><button className="nav-button">Crear cuenta</button></Link>
+          <Link to={"/inicioSesion"}><button className="nav-button">Iniciar sesión</button></Link>
           
-          <button className="nav-button">Iniciar sesión</button>
+          
         </div>
         <div className='user'>
         <i className="fa-solid fa-user">

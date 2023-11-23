@@ -186,4 +186,8 @@ const CrearCuenta = () => {
   );
 };
 
+<<<<<<< Updated upstream
 export default CrearCuenta;
+=======
+export default CrearCuenta;
+>>>>>>> Stashed changes

@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { routes } from "./routes/routes";
 import PanelAdmin from "./components/pages/PanelAdmin/PanelAdmin";
 import CrearCuenta from "./components/pages/CrearCuenta/CrearCuenta";
+import InicioSesion from "./components/pages/InicioSesion/InicioSesion";
 
 
 
@@ -22,6 +23,7 @@ function App() {
           </Route>
           <Route path="*" element={<h1>404 not found</h1>} />
           <Route path="/crearCuenta" element={<CrearCuenta />}></Route>
+          <Route path="/inicioSesion" element={<InicioSesion/>}></Route>
         </Routes>
         
     </BrowserRouter>
