@@ -30,7 +30,7 @@
 .category-container {
   display: flex;
   justify-content: space-evenly;
-  width: 70%;
+  width: 80%;
 }
 
 .App {
@@ -80,7 +80,7 @@ input.inputBox {
   padding-top: 10px;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
   .right-content {
     display: none;
   }
@@ -98,5 +98,11 @@ input.inputBox {
 
   .calendar {
     font-size: 30px;
+  }
+}
+
+@media (max-width: 1135px) {
+  .category-container {
+    display: none;
   }
 }
