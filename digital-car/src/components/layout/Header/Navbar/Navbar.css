@@ -129,6 +129,16 @@ input.inputBox{
     margin-top: 5px;
     color: var(--color-three);
    }
+
+  
+
+   .h4{
+    display: none;
+   }
+
+   .calendar{
+    font-size: 30px;
+   }
     
   }
 /* .navbar-container{
