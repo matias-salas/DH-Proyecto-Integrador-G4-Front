@@ -10,7 +10,7 @@ import DateRangePicker from '../../../daterangepicker/DateRangePicker';
 const Navbar = () => {
 
   return (
-    <header className="navbar-container">
+    <header className="navbar-container" style={{ zIndex: 1000 }}>
       <div className="navbar">
         <div className="left-content">
           <Link to="/" className="logo-link">
