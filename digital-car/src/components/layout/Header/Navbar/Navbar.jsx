@@ -19,7 +19,8 @@ const Navbar = () => {
           </Link>
         </div>
         <div className="right-content">
-          <button className="nav-button">Crear cuenta</button>
+          <Link to={"/crearCuenta"}><button className="nav-button">Crear cuenta</button></Link>
+          
           <button className="nav-button">Iniciar sesión</button>
         </div>
         <div className='user'>
