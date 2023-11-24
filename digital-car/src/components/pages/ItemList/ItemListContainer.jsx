@@ -4,9 +4,10 @@ import { products } from "../../../productsMock";
 // import { BounceLoader } from "react-spinners";
 import NotFound from "../../common/NotFound/NotFound";
 
+
 const ItemListContainer = ({ handleBack }) => {
   const { items } = useLocalFetch([], products);
-
+  console.log
 
       // <BounceLoader
       //     color="var(--color-six)"

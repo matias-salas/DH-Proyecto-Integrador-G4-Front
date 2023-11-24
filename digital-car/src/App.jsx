@@ -4,14 +4,15 @@ import { routes } from "./routes/routes";
 import PanelAdmin from "./components/pages/PanelAdmin/PanelAdmin";
 import CrearCuenta from "./components/pages/CrearCuenta/CrearCuenta";
 import InicioSesion from "./components/pages/InicioSesion/InicioSesion";
+import { UserState } from './context/UserContext';
 
 
 
 function App() {
   return (
+    <UserState>
     
     <BrowserRouter>
-    
         <Routes>
           <Route path="/panelAdmin" element={<PanelAdmin />}>
 
@@ -25,8 +26,9 @@ function App() {
           <Route path="/crearCuenta" element={<CrearCuenta />}></Route>
           <Route path="/inicioSesion" element={<InicioSesion/>}></Route>
         </Routes>
-        
     </BrowserRouter>
+    </UserState>
+
   );
 }
 

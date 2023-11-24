@@ -1,11 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { Formik } from "formik";
 import { useNavigate, Link } from 'react-router-dom';
 import "./InicioSesion.css";
+import { UserContext } from '../../../context/UserContext';
 
 const InicioSesion = () => {
     const [error, setError] = useState("");
     const navigate = useNavigate();
+    const {  setCurrentUser } = useContext(UserContext);
 
     let usuario = 'matiasalas.e@gmail.com';
     let contraseña = 'matie3012';
@@ -13,6 +15,14 @@ const InicioSesion = () => {
     let apellido = 'Salas'
 
     const validarCredenciales = (correo, password) => {
+        if (correo === usuario && password === contraseña) {
+            const obj = {
+                correo: correo,
+                password: password,
+            }
+            localStorage.setItem('user', JSON.stringify(obj));
+            setCurrentUser(obj);
+        }
         return correo === usuario && password === contraseña;
     };
 
@@ -22,6 +32,7 @@ const InicioSesion = () => {
                 initialValues={{ direccionCorreo: "", contraseña: "" }}
                 validate={(valores) => {
                     let errores = {};
+
 
                     // Validación para el correo
                     if (!valores.direccionCorreo) {
@@ -40,7 +51,7 @@ const InicioSesion = () => {
                     return errores;
                 }}
                 onSubmit={(valores, { resetForm }) => {
-                    if (validarCredenciales(valores.direccionCorreo, valores.contraseña)) {
+                    if (validarCredenciales(valores.direccionCorreo, valores.contraseña, valores.nombre)) {
                         resetForm();
                         navigate('/'); // Redirigir a la ruta del home
                     } else {
@@ -52,7 +63,7 @@ const InicioSesion = () => {
                         <div className="contenedoris">
                             <form className="formulariois" onSubmit={handleSubmit}>
                                 <p>Iniciar Sesion</p>
-
+                                
                                 <div className="contenedorinputis" >
                                     <label htmlFor="direccionCorreo">Direccion de correo</label>
                                     <input
