@@ -6,8 +6,6 @@ import { useLocalFetch } from "../../hooks/useLocalFetch";
 import { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import DateRangeComp from "../../daterangepicker/DateRange";
-import { faCalendarAlt } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import NotFound from "../../common/NotFound/NotFound";
 
 const ItemList = ({ prod }) => {
@@ -75,14 +73,12 @@ const ItemList = ({ prod }) => {
           onChange={handleChange}
           className="input-barra"
         />
+
+        
+          <DateRangeComp />
+        
       </div>
-      <div className="App">
-        <h4 className="h4">Fecha Retiro/Devolucion</h4>
-        <i className="calendar">
-          <FontAwesomeIcon icon={faCalendarAlt} />
-        </i>
-        <DateRangeComp />
-      </div>
+
       <div>
         <div className="cards-cat">
           {showBackButtonLocal && (
