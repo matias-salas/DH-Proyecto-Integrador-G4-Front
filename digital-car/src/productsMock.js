@@ -2,6 +2,7 @@ export const products = [
   {
     id: 1,
     title: "Jeep Compass 2.4 SPORT MT 4X2 Suv 2020",
+    marca: "Jeep",
     type: "Suv",
     price: 3000,
     year: 2020,
@@ -10,6 +11,7 @@ export const products = [
   {
     id: 2,
     title: "Chevrolet Tracker 1.2 T AT 4X2 Suv 2023",
+    marca: "Chevrolet",
     type: "Suv",
     price: 2000,
     year: 2023,
@@ -18,6 +20,7 @@ export const products = [
   {
     id: 3,
     title: "Volkswagen Taos 1.4T HIGHLINE AT6 Suv 2022",
+    marca: "Volkswagen",
     type: "Suv",
     price: 3000,
     year: 2022,
@@ -26,6 +29,7 @@ export const products = [
   {
     id: 4,
     title: "Honda Hr-v 1.8 EX 2WD CVT Suv 2019",
+    marca: "Honda",
     type: "Suv",
     price: 3000,
     year: 2019,
@@ -34,6 +38,7 @@ export const products = [
   {
     id: 5,
     title: "Ford Ranger 3.2 CD LIMITED TDCI 200CV AT 4X4 Pickup 2022",
+    marca: "Ford",
     type: "Pickup",
     price: 3000,
     year: 2022,
@@ -42,6 +47,7 @@ export const products = [
   {
     id: 6,
     title: "Volkswagen Amarok 2.0 CD TDI 180CV HIGHLINE AT 4X2 Pickup 2020",
+    marca: "Volkswagen",
     type: "Pickup",
     price: 3000,
     year: 2020,
@@ -50,6 +56,7 @@ export const products = [
   {
     id: 7,
     title: "Fiat Strada 1.4 8V ENDURANDE CD Pickup 2022",
+    marca: "Fiat",
     type: "Pickup",
     price: 3000,
     year: 2022,
@@ -58,6 +65,7 @@ export const products = [
   {
     id: 8,
     title: "Toyota Hilux 2.8 CD SRX 177CV 4X4 MT Pickup 2017",
+    marca: "Toyota",
     type: "Pickup",
     price: 3000,
     year: 2017,
@@ -66,6 +74,7 @@ export const products = [
   {
     id: 9,
     title: "Citroen Berlingo 1.6 VTI 115 BUSINESS Van 2022",
+    marca: "Citroen",
     type: "Van",
     price: 3000,
     year: 2022,
@@ -74,6 +83,7 @@ export const products = [
   {
     id: 10,
     title: "Renault Kangoo II EXPRESS CONFORT 1.6 SCE Van 2020",
+    marca: "Renault",
     type: "Van",
     price: 3000,
     year: 2020,
@@ -82,6 +92,7 @@ export const products = [
   {
     id: 11,
     title: "Fiat Fiorino 1.4 FIRE EVO 87CV Van 2019",
+    marca: "Fiat",
     type: "Van",
     price: 3000,
     year: 2019,
@@ -90,6 +101,7 @@ export const products = [
   {
     id: 12,
     title: "Peugeot Partner Patagonica 1.6 HDI VTC PLUS 92 Van 2023",
+    marca: "Peugeot",
     type: "Van",
     price: 3000,
     year: 2023,
@@ -98,6 +110,7 @@ export const products = [
   {
     id: 13,
     title: "Chevrolet Cruze Ii 1.4 SEDAN PREMIER AT Sedan 2020",
+    marca: "Chevrolet",
     type: "Sedan",
     price: 3000,
     year: 2020,
@@ -106,6 +119,7 @@ export const products = [
   {
     id: 14,
     title: "Ford Fiesta Kinetic Design 1.6 SE PLUS 120CV Sedan 2016",
+    marca: "Ford",
     type: "Sedan",
     price: 3000,
     year: 2016,
@@ -114,6 +128,7 @@ export const products = [
   {
     id: 15,
     title: "Toyota Etios 1.5 SEDAN XLS AT Sedan 2018",
+    marca: "Toyota",
     type: "Sedan",
     price: 3000,
     year: 2018,
@@ -122,6 +137,7 @@ export const products = [
   {
     id: 16,
     title: "Audi A3 1.4 TFSI STRONIC 122CV Sedan 2015",
+    marca: "Audi",
     type: "Sedan",
     price: 3000,
     year: 2015,
@@ -130,6 +146,7 @@ export const products = [
   {
     id: 17,
     title: "Volkswagen Suran 1.6 HIGHLINE I-MOTION Minivan 2019",
+    marca: "Volkswagen",
     type: "Minivan",
     price: 3000,
     year: 2019,
@@ -138,6 +155,7 @@ export const products = [
   {
     id: 18,
     title: "Chevrolet Spin 1.8 LTZ 5AS 105CV Minivan 2018",
+    marca: "Chevrolet",
     type: "Minivan",
     price: 3000,
     year: 2018,
@@ -146,6 +164,7 @@ export const products = [
   {
     id: 19,
     title: "Peugeot 3008 1.6 ALLURE THP TIPTRONIC Minivan 2019",
+    marca: "Peugeot",
     type: "Minivan",
     price: 3000,
     year: 2019,
@@ -154,6 +173,7 @@ export const products = [
   {
     id: 20,
     title: "Peugeot 5008 1.6 ALLURE THP TIPTRONIC Minivan 2019",
+    marca: "Peugeot",
     type: "Minivan",
     price: 3000,
     year: 2019,
@@ -162,6 +182,7 @@ export const products = [
   {
     id: 21,
     title: "Toyota Yaris 1.5 XLS CVT Hatchback 2022",
+    marca: "Toyota",
     type: "Hatchback",
     price: 3000,
     year: 2022,
@@ -170,6 +191,7 @@ export const products = [
   {
     id: 22,
     title: "Renault Sandero Stepway 1.6 INTENS MT Hatchback 2022",
+    marca: "Renault",
     type: "Hatchback",
     price: 3000,
     year: 2022,
@@ -178,6 +200,7 @@ export const products = [
   {
     id: 23,
     title: "Fiat Mobi 1.0 EASY MT Hatchback 2017",
+    marca: "Fiat",
     type: "Hatchback",
     price: 3000,
     year: 2017,
@@ -186,6 +209,7 @@ export const products = [
   {
     id: 24,
     title: "Peugeot 208 1.6 FELINE MT Hatchback 2019",
+    marca: "Peugeot",
     type: "Hatchback",
     price: 3000,
     year: 2019,

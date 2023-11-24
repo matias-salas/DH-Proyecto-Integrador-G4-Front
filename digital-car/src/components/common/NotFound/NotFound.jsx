@@ -1,11 +1,7 @@
+import { Link } from "react-router-dom";
 import "./NotFound.css";
-import { useNavigate } from "react-router-dom";
 
 const NotFound = () => {
-  const navigate = useNavigate();
-  const handleBack = () => {
-    navigate(-1);
-  };
   return (
     <div className="notfound">
       <img
@@ -16,9 +12,9 @@ const NotFound = () => {
 
       <h3 className="notfoundh3">No encontramos resultados para tu búsqueda</h3>
 
-      <button className="back-cat" onClick={handleBack}>
-        Volver
-      </button>
+      <Link to={"/"}>
+        <button className="back-cat">Volver</button>
+      </Link>
     </div>
   );
 };
