@@ -33,14 +33,14 @@ const ItemList = ({ prod }) => {
       </div>
       <div>
         <div className="cards-cat">
-          
-
           {showBackButtonLocal && (
-            <button onClick={handleBack} className="back-cat">Volver</button>
+            <button onClick={handleBack} className="back-cat">
+              Volver
+            </button>
           )}
           <div className="category-container" onClick={handleClick}>
             {items.map((element) => {
-              return <CategoryCard key={element.id} element={element} /> ;
+              return <CategoryCard key={element.id} element={element} />;
             })}
           </div>
           <br />

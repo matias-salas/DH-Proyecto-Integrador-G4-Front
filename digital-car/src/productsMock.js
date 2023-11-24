@@ -190,5 +190,5 @@ export const products = [
     price: 3000,
     year: 2019,
     img: "https://images.prd.kavak.io/eyJidWNrZXQiOiJrYXZhay1pbWFnZXMiLCJrZXkiOiJpbWFnZXMvMjg2NDgyL0VYVEVSSU9SLWZyb250U2lkZVBpbG90TmVhci0xNzAwNTg4NTgxNjQyLmpwZWciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjgxMCwiaGVpZ2h0Ijo0NjV9fX0=",
-  },
+  }
 ];
