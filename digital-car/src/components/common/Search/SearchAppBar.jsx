@@ -77,7 +77,7 @@ const SearchAppBar = () => {
     <Box sx={{ flexGrow: 1 }}>
       <AppBar
         position="static"
-        style={{ backgroundColor: "var(--color-four)" }}
+        style={{ backgroundColor: "var(--color-two)", boxShadow: "none" }} 
       >
         <Toolbar className="search">
           <IconButton
