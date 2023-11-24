@@ -27,16 +27,19 @@ const VerDetalles = () => {
   const [open, setOpen] = useState(false);
   const { productSelected } = useFetchID({}, products);
   const [mainImage, setMainImage] = useState("placeholder.jpg"); // Usa una imagen de placeholder
-
   useEffect(() => {
     if (productSelected.img) {
       setMainImage(productSelected.img);
+    
     }
   }, [productSelected.img]);
 
   const handleImageClick = (imageSrc) => {
     setMainImage(imageSrc);
   };
+
+  console.log(productSelected.availableDates);
+
 
   const Dates = [dayjs('2023-11-17'), dayjs('2023-11-18'), dayjs('2023-11-19'), 
                  dayjs('2023-11-20'), dayjs('2023-11-21'), dayjs('2023-11-22'),
@@ -149,11 +152,14 @@ const VerDetalles = () => {
           <hr />
 
           <Grid container spacing={2} className="calendario-reserva-container">
-            <Grid item xs={12}  s={12}  md={6}>
-            <div className="calendario-contenedor" ref={calendarRef}>
+        <Grid item xs={12} md={6}>
+          <div className="calendario-contenedor" ref={calendarRef}>
+            {/* Asegúrate de que productSelected no es null antes de acceder a availableDates */}
+            {productSelected && 
               <DateCalendarValue availableDates={Dates} />
-            </div>
-            </Grid>
+            }
+          </div>
+        </Grid>
             <Grid item xs={12} s={12}  md={6}>
               <div className="reserva-descripcion">
                 <h3>Detalles de la Reserva</h3>

@@ -6,6 +6,8 @@ import { DateRangeCalendar } from '@mui/x-date-pickers-pro/DateRangeCalendar';
 import dayjs from 'dayjs';
 
 export default function BasicDateRangeCalendar({ availableDates }) {
+
+
   useEffect(() => {
   const divs = document.querySelectorAll('div');
     divs.forEach(div => {
