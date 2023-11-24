@@ -6,6 +6,13 @@ import { DateRangeCalendar } from '@mui/x-date-pickers-pro/DateRangeCalendar';
 import dayjs from 'dayjs';
 
 export default function BasicDateRangeCalendar({ availableDates }) {
+  console.log("BASIC ")
+  console.log(availableDates)
+  //transform to array 
+  // from array to dayjs objects
+  const availableDatesDayjs = availableDates.map(date => dayjs(date));
+
+
   useEffect(() => {
   const divs = document.querySelectorAll('div');
     divs.forEach(div => {
@@ -20,7 +27,7 @@ export default function BasicDateRangeCalendar({ availableDates }) {
 
   // Función para verificar si una fecha debe ser deshabilitada
   const shouldDisableDate = (date) => {
-    return !availableDates.some(availableDate => 
+    return !availableDatesDayjs.some(availableDate => 
       availableDate.isSame(date, 'day')
     );
   };

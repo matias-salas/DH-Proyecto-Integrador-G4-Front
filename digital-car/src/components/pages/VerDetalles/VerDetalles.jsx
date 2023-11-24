@@ -25,12 +25,14 @@ const CarFeature = ({ icon, title, value }) => (
 
 const VerDetalles = () => {
   const [open, setOpen] = useState(false);
+  const [isLoading, setIsLoading] = useState(true); // Nuevo estado para manejar la carga
   const { productSelected } = useFetchID({}, products);
   const [mainImage, setMainImage] = useState("placeholder.jpg"); // Usa una imagen de placeholder
-
+  console.log(productSelected)
   useEffect(() => {
     if (productSelected.img) {
       setMainImage(productSelected.img);
+      setIsLoading(false); // Actualiza isLoading a false cuando los datos estén cargados
     }
   }, [productSelected.img]);
 
@@ -38,18 +40,11 @@ const VerDetalles = () => {
     setMainImage(imageSrc);
   };
 
-  const Dates = [dayjs('2023-11-17'), dayjs('2023-11-18'), dayjs('2023-11-19'), 
-                 dayjs('2023-11-20'), dayjs('2023-11-21'), dayjs('2023-11-22'),
-                 dayjs('2023-11-23'), dayjs('2023-11-24'), dayjs('2023-11-25'),
-                 dayjs('2023-11-29'), dayjs('2023-11-30'), dayjs('2023-12-01'),
-                 dayjs('2023-12-02'), dayjs('2023-12-03'), dayjs('2023-12-10'),
-                 dayjs('2023-12-05'), dayjs('2023-12-06'), dayjs('2023-12-07'),
-                 dayjs('2023-12-11'), dayjs('2023-12-12'), dayjs('2023-12-13'),
-                 dayjs('2023-12-14'), dayjs('2023-12-15'), dayjs('2023-12-16'),
-                 dayjs('2023-12-17'), dayjs('2023-12-18'), dayjs('2023-12-19'),
-                 dayjs('2023-12-26'), dayjs('2023-12-27'), dayjs('2023-12-28'),
-                 dayjs('2023-12-29'), dayjs('2023-12-30'), dayjs('2023-12-31')];
+ 
 
+  if (isLoading) {
+    return <div>Esperando...</div>; // Muestra esto mientras isLoading es true
+  }
   return (
     <>
       <div className='body-container-details'>
@@ -135,7 +130,7 @@ const VerDetalles = () => {
           <Grid container spacing={2} className="calendario-reserva-container">
             <Grid item xs={12}  s={12}  md={6}>
             <div className="calendario-contenedor">
-              <DateCalendarValue availableDates={Dates} />
+              <DateCalendarValue availableDates={productSelected.availableDates} />
             </div>
             </Grid>
             <Grid item xs={12} s={12}  md={6}>
