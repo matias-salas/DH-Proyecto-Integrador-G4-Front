@@ -1,77 +1,122 @@
-@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400;500;600;700&family=Roboto+Mono:ital,wght@0,400;0,600;1,700&family=Roboto:wght@100;400;500;700&display=swap");
+/* Importamos Google Fonts para una mejor tipografía */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Open+Sans:wght@400;600&display=swap');
+
+/* Configuración general y colores */
+:root {
+    --color-background: #f4f7f6; /* Color de fondo más suave */
+    --color-form-background: #ffffff; /* Fondo del formulario */
+    --color-primary: #46354e; /* Color primario más moderno */
+    --color-secondary: #83728e; /* Color secundario complementario */
+    --color-text: #001219; /* Color para el texto, mejora la legibilidad */
+    --color-error: #e63946; /* Color para mensajes de error */
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Open Sans', sans-serif;
+    background-color: var(--color-background);
+    color: var(--color-text);
+}
 
 .is {
-  background-color: var(--color-four);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
+
 .contenedoris {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+    width: 90%;
+    max-width: 400px; /* Limitamos el ancho máximo */
+    background-color: var(--color-form-background);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+
 .formulariois {
-  background-color: var(--color-six);
-  width: 40%;
-  margin: 4rem;
-  border-radius: 30px;
+    display: flex;
+    flex-direction: column;
 }
 
 .contenedorinputis {
-  margin: 1rem 6rem;
-  display: flex;
-  text-align: left;
-  flex-direction: column;
-  font-size: 25px;
-  color: var(--color-three);
-  font-family: roboto;
+    margin-bottom: 1rem;
+    position: relative;
 }
 
-.formulariois p {
-  font-size: 2.5rem;
-  font-weight: bold;
-  margin: 2rem 6rem;
-  color: var(--color-three);
+.contenedorinputis label {
+    display: block;
+    margin-bottom: .5rem;
+    font-weight: 600;
 }
 
 .contenedorinputis input {
-  mix-blend-mode: color-burn;
-  box-shadow: inset 0 0 10px 5px rgba(0, 0, 0, 0.35);
-  border: none;
-  border-radius: 12px;
-  height: 4rem;
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.textoErroris {
+    color: var(--color-error);
+    font-size: 0.8rem;
+    position: absolute;
+    bottom: -20px; /* Posicionamos debajo del input */
 }
 
 .formulariois button {
-  background-color: var(--color-four);
-  height: 2.7rem;
-  border: none;
-  border-radius: 8px;
-  color: var(--color-six);
-  font-size: 20px;
-  font-weight: bold;
-  float: right;
-  margin: 2rem 6rem;
+    background-color: var(--color-primary);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 0.8rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
-.textoErroris {
-  font-size: 15px;
-  color: red;
+
+.formulariois button:hover {
+    background-color: var(--color-secondary);
 }
-.texto {
-  width: 100%;
-  text-align: center;
-  color: var(--color-six);
-  font-family: roboto;
-  font-size: 20px;
+
+div .texto{
+    text-align: center;
+    font-size: 1.15rem;
+    font-weight: 300;
+    margin-bottom: 1rem;  
+    width: 100%;
+    margin-top: 20px;
 }
+
+.div-botonis{
+    display: flex;
+    justify-content: center;  
+    align-items: center;
+    margin-top: 20px;
+    flex-direction: column;
+}
+
 .botonis {
-  background-color: var(--color-four);
-  height: 2.7rem;
-  border: none;
-  box-shadow: 0 0 10px rgba(226, 214, 230, 0.5);
-  border-radius: 7px;
-  color: var(--color-six);
-  font-size: 20px;
-  font-weight: bold;
-  float: right;
-  margin: 2rem 6rem;
+    background-color: var(--color-secondary);
+    color: #fff;
+    padding: 0.8rem;
+    border-radius: 8px;
+    border: none;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.botonis:hover {
+    background-color: var(--color-primary);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contenedoris {
+        width: 100%;
+        max-width: none;
+    }
 }

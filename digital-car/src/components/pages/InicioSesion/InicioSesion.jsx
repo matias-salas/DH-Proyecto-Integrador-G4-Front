@@ -1,113 +1,99 @@
-import React, {useState} from 'react';
-import "./InicioSesion.css";
+import React, { useState } from 'react';
 import { Formik } from "formik";
-import { Link } from 'react-router-dom';
-
+import { useNavigate, Link } from 'react-router-dom';
+import "./InicioSesion.css";
 
 const InicioSesion = () => {
-    const [inicioSesion, cambiarInicioSesion] = useState(false);
+    const [error, setError] = useState("");
+    const navigate = useNavigate();
 
-	return (
-	
+    let usuario = 'matiasalas.e@gmail.com';
+    let contraseña = 'matie3012';
+
+    const validarCredenciales = (correo, password) => {
+        return correo === usuario && password === contraseña;
+    };
+
+    return (
         <>
-        <Formik
+            <Formik
+                initialValues={{ direccionCorreo: "", contraseña: "" }}
+                validate={(valores) => {
+                    let errores = {};
 
-            //inicialización de valores del formulario
-            initialValues={
-                {
-                    direccionCorreo: "",
-                    contraseña: "",
-                }
+                    // Validación para el correo
+                    if (!valores.direccionCorreo) {
+                        errores.direccionCorreo = "Por favor ingresa una dirección de correo electrónico";
+                    } else if (!/^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/.test(valores.direccionCorreo)) {
+                        errores.direccionCorreo = "El correo solo puede contener letras, números, guiones y guión bajo.";
+                    }
 
+                    // Validación para la contraseña
+                    if (!valores.contraseña) {
+                        errores.contraseña = "Por favor ingresa una contraseña";
+                    } else if (!/^(?=\S*?[A-Za-z])(?=\S*?[0-9])\S{8,}$/.test(valores.contraseña)) {
+                        errores.contraseña = "La contraseña debe tener mínimo 8 caracteres sin espacios, debe tener al menos números y letras";
+                    }
 
-            }
-            validate={(valores) => {
-                let errores = {};
+                    return errores;
+                }}
+                onSubmit={(valores, { resetForm }) => {
+                    if (validarCredenciales(valores.direccionCorreo, valores.contraseña)) {
+                        resetForm();
+                        navigate('/'); // Redirigir a la ruta del home
+                    } else {
+                        setError("Credenciales incorrectas");
+                    }
+                }}>
+                {({ values, errors, touched, handleSubmit, handleChange, handleBlur }) => (
+                    <body className='is'>
+                        <div className="contenedoris">
+                            <form className="formulariois" onSubmit={handleSubmit}>
+                                <p>Iniciar Sesion</p>
 
-                //Validación para el correo
-                if (!valores.direccionCorreo) {
-                    errores.direccionCorreo = "Por favor ingresa una dirección de correo electrónico"
-                } else if (!/^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/.test(valores.direccionCorreo)) {
-                    errores.direccionCorreo = "El correo solo puede cntener letras, números, guiones y quión bajo. "
-                }
-
-               
-
-                //Validacion para la contraseña
-                if (!valores.contraseña) {
-                    errores.contraseña = "Por favor ingresa una contraseña"
-                } else if (!/^(?=\S*?[A-Za-z])(?=\S*?[0-9])\S{8,}$/.test(valores.contraseña)) {
-                    errores.contraseña = "La contraseña debe tener mínimo 8 caracteres sin espacios, debe tener al menos numeros y letras "
-                }
-
-                return errores;
-
-            }}
-
-            onSubmit={(valores, { resetForm }) => {
-                resetForm(); //Resetear el formulario apenas envíe los datos
-                cambiarInicioSesion(true);
-                console.log("Formulario enviado");
-                //<Link to="./"></Link>   Pendiente
-
-            }}>
-
-            {({ values, errors, touched, handleSubmit, handleChange, handleBlur }) => (
-                <body className='is'>
-                    <div className="contenedoris">
-                        <form action="" className="formulariois" onSubmit={handleSubmit}>
-
-                        <p>Iniciar Sesion</p>
-
-
-                            <div className="contenedorinputis" >
-                                <label htmlFor="direccionCorreo">Direccion de correo</label>
-                                <input
-                                    type="email"
-                                    id='direccionCorreo'
-                                    name='direccionCorreo'
-                                    placeholder='Ingresa tu correo'
-                                    value={values.direccionCorreo}
-                                    onChange={handleChange}
-                                    onBlur={handleBlur}
-                                />
-                                {touched.direccionCorreo && errors.direccionCorreo && <div className="textoError">{errors.direccionCorreo}</div>}
-
-                            </div>
+                                <div className="contenedorinputis" >
+                                    <label htmlFor="direccionCorreo">Direccion de correo</label>
+                                    <input
+                                        type="email"
+                                        id='direccionCorreo'
+                                        name='direccionCorreo'
+                                        placeholder='Ingresa tu correo'
+                                        value={values.direccionCorreo}
+                                        onChange={handleChange}
+                                        onBlur={handleBlur}
+                                    />
+                                    {touched.direccionCorreo && errors.direccionCorreo && <div className="textoError">{errors.direccionCorreo}</div>}
+                                </div>
                         
-                            <div className="contenedorinputis" >
-                                <label htmlFor="contraseña">Contraseña</label>
-                                <input
-                                    type="password"
-                                    id='contraseña'
-                                    name='contraseña'
-                                    placeholder='Ingresa tu contraseña'
-                                    value={values.contraseña}
-                                    onChange={handleChange}
-                                    onBlur={handleBlur}
-                                />
-                                {touched.contraseña && errors.contraseña && <div className="textoErroris">{errors.contraseña}</div>}
+                                <div className="contenedorinputis" >
+                                    <label htmlFor="contraseña">Contraseña</label>
+                                    <input
+                                        type="password"
+                                        id='contraseña'
+                                        name='contraseña'
+                                        placeholder='Ingresa tu contraseña'
+                                        value={values.contraseña}
+                                        onChange={handleChange}
+                                        onBlur={handleBlur}
+                                    />
+                                    {touched.contraseña && errors.contraseña && <div className="textoErroris">{errors.contraseña}</div>}
+                                </div>
+
+                                {error && <div className="error">{error}</div>}
+
+                                <button type='submit'>Ingresar</button>
+                            </form>
+                            
+                            <div className='div-botonis'>
+                                <p className='texto'>¿Nuevo en nuestra comunidad?</p>
+                                <Link to={"/crearCuenta"}><button className='botonis'>Crear cuenta</button></Link>
                             </div>
-                            <button type='submit'  >Ingresar</button>
-                        </form>
-
-                        <p className='texto'>Nuevo en nuestra comunidad</p>
-                       <div>
-                       <Link to={"/crearCuenta"}><button className='botonis'>Crear cuenta</button></Link>
-                       </div>
-                        
-                    </div>
-
-                </body>
-
-            )}
-
-        </Formik>
-
-
-
-    </>
-	);
+                        </div>
+                    </body>
+                )}
+            </Formik>
+        </>
+    );
 }
- 
+
 export default InicioSesion;
