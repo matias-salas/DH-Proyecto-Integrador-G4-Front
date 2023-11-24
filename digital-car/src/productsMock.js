@@ -2,7 +2,7 @@ import dayjs from 'dayjs';
 
 const generateRandomDates = () => {
   let dates = [];
-  for (let i = 0; i < 10; i++) {
+  for (let i = 0; i < 50; i++) {
     // Genera fechas aleatorias dentro de un rango de 30 días desde hoy
     let randomDate = dayjs().add(Math.floor(Math.random() * 30), 'day');
     let string_date = randomDate.format('YYYY-MM-DD');
