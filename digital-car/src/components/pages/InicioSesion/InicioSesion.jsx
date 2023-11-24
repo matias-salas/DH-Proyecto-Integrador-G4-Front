@@ -9,6 +9,8 @@ const InicioSesion = () => {
 
     let usuario = 'matiasalas.e@gmail.com';
     let contraseña = 'matie3012';
+    let nombre = 'Matias'
+    let apellido = 'Salas'
 
     const validarCredenciales = (correo, password) => {
         return correo === usuario && password === contraseña;

@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCaretLeft, faUser, faCar, faShieldHalved, faSuitcase, faSnowflake, faGear } from "@fortawesome/free-solid-svg-icons";
@@ -50,6 +50,22 @@ const VerDetalles = () => {
                  dayjs('2023-12-26'), dayjs('2023-12-27'), dayjs('2023-12-28'),
                  dayjs('2023-12-29'), dayjs('2023-12-30'), dayjs('2023-12-31')];
 
+
+  const [scrollToCalendar, setScrollToCalendar] = useState(false);
+  const calendarRef = useRef(null);
+
+  const scrollToCalendarFunc = () => {
+    if (calendarRef.current) {
+      calendarRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  useEffect(() => {
+    if (scrollToCalendar) {
+      scrollToCalendarFunc();
+      setScrollToCalendar(false);
+    }
+  }, [scrollToCalendar]);
   return (
     <>
       <div className='body-container-details'>
@@ -87,7 +103,7 @@ const VerDetalles = () => {
                 <div className='descripcion'>
                   <h2>Descripción</h2>
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum dolores cum numquam officiis quisquam ducimus facilis rem alias eveniet. Asperiores nulla quo est ducimus adipisci dolores aliquam neque incidunt? Maxime.</p>
-                  <Button variant="contained" style={{ zIndex: 1 }}>Ver disponibilidad</Button>
+                  <Button variant="contained" style={{ zIndex: 1 }} onClick={() => setScrollToCalendar(true)}>Ver disponibilidad</Button>
                 </div>
               </div>
             </Grid>
@@ -134,7 +150,7 @@ const VerDetalles = () => {
 
           <Grid container spacing={2} className="calendario-reserva-container">
             <Grid item xs={12}  s={12}  md={6}>
-            <div className="calendario-contenedor">
+            <div className="calendario-contenedor" ref={calendarRef}>
               <DateCalendarValue availableDates={Dates} />
             </div>
             </Grid>

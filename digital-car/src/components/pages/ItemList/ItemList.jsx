@@ -47,6 +47,7 @@ const ItemList = ({ prod }) => {
   
       return (!categoryName || item.type === categoryName) &&
              (item.marca.toLowerCase().includes(busqueda.toLowerCase()) ||
+              item.title.toLowerCase().includes(busqueda.toLowerCase()) ||
               item.type.toLowerCase().includes(busqueda.toLowerCase()) ||
               item.price.toString().toLowerCase().includes(busqueda.toLowerCase()) ||
               item.year.toString().toLowerCase().includes(busqueda.toLowerCase())) &&
