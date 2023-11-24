@@ -1,4 +1,4 @@
-import { useState, useEffect, useContext } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import DateRangeComp from "../../daterangepicker/DateRange";
 import NotFound from "../../common/NotFound/NotFound";
@@ -7,7 +7,6 @@ import CategoryCard from "../../common/CategoryCard/CategoryCard";
 import { useLocalFetch } from "../../hooks/useLocalFetch";
 import { categories } from "../../../categoriesMock";
 import "./ItemList.css";
-import { UserContext } from "../../../context/UserContext";
 
 const ItemList = ({ prod }) => {
   const { categoryName } = useParams();
@@ -18,8 +17,6 @@ const ItemList = ({ prod }) => {
   const { items } = useLocalFetch([], categories);
   const [filteredItems, setFilteredItems] = useState([]);
 
-  const { currentUser } = useContext(UserContext);
-  console.log(currentUser)
   const handleClick = () => {
     setShowBackButtonLocal(true);
   };
@@ -80,7 +77,11 @@ const ItemList = ({ prod }) => {
 
       <div>
         <div className="cards-cat">
-
+          {showBackButtonLocal && (
+            <button onClick={handleBack} className="back-cat">
+              Volver
+            </button>
+          )}
           <div className="category-container">
             {items.map((element) => (
               <div key={element.id} onClick={handleClick}>
