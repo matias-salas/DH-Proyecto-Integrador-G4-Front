@@ -38,9 +38,9 @@ const ItemList = ({ prod }) => {
               Volver
             </button>
           )}
-          <div className="category-container" onClick={handleClick}>
+          <div className="category-container">
             {items.map((element) => {
-              return <CategoryCard key={element.id} element={element} />;
+              return <div key={element.id} onClick={handleClick}><CategoryCard element={element} /></div> ;
             })}
           </div>
           <br />
