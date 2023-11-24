@@ -7,14 +7,14 @@
   height: 100%;
 }
 .container-menu {
-  margin: 164px 0 140px 0;
+  margin: 100px 0 140px 0;
 }
 .cards-cat {
   background-color: var(--color-five);
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 30px;
+  padding-top: 90px;
 }
 .back-cat {
   margin-top: 10px;
@@ -35,7 +35,7 @@
   width: 80%;
 }
 
-.App {
+/* .App {
   text-align: center;
   font-size: 20px;
   height: 75px;
@@ -43,12 +43,43 @@
   justify-content: center;
   padding-top: 10px;
   background-color: var(--color-six);
+} */
+
+
+.barrabusqueda{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 0 20px 0 20px;
+  height: 64px;
+  background-color: var(--color-two);
+  position: fixed;
 }
 
-.h4 {
-  margin-left: 24px;
-  margin-top: 10px;
+.input-barra{
+  width: 660px;
+  height: 39px;
+  padding: 10px 0 10px 50px;
+  border: none;
+  background: #FFFFFF26;
+  color: white;
+  border-radius: 4px;
+  
 }
+.input-barra:focus {
+  outline: none; 
+}
+.input-barra:hover{
+  background-color:  #fcfcfc43;
+}
+
+.input-barra::placeholder{
+  color: #efefef8e;
+  font-weight: bold;
+}
+
+
 
 .calendar {
   margin-left: 10px;

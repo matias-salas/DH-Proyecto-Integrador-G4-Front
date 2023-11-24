@@ -13,12 +13,12 @@ input.inputBox{
 
 .calendarWrap {
     display: inline-block;
-    position: relative;
+    
 }
 
 .calendaElement {
-    position: absolute;
-    left: 50%;
+    
+    
     transform: translateX(-50%);
     top: 40px;
     border: 1px solid #ccc;

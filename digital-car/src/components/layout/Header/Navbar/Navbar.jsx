@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom';
-import SearchAppBar from "../../../common/Search/SearchAppBar";
 import "./Navbar.css";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
@@ -30,7 +29,7 @@ const Navbar = () => {
         </i>
         </div>
       </div>
-      <SearchAppBar />
+      
       {/* <div className='App'>
         <h4 className='h4' >Fecha Retiro/Devolucion</h4>
         <i className="calendar">
