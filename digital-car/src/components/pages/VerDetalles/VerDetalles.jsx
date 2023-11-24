@@ -40,6 +40,22 @@ const VerDetalles = () => {
     setMainImage(imageSrc);
   };
 
+
+  const [scrollToCalendar, setScrollToCalendar] = useState(false);
+  const calendarRef = useRef(null);
+
+  const scrollToCalendarFunc = () => {
+    if (calendarRef.current) {
+      calendarRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  useEffect(() => {
+    if (scrollToCalendar) {
+      scrollToCalendarFunc();
+      setScrollToCalendar(false);
+    }
+  }, [scrollToCalendar]);
  
 
   if (isLoading) {
@@ -129,7 +145,7 @@ const VerDetalles = () => {
 
           <Grid container spacing={2} className="calendario-reserva-container">
             <Grid item xs={12}  s={12}  md={6}>
-            <div className="calendario-contenedor">
+            <div className="calendario-contenedor"  ref={calendarRef}>
               <DateCalendarValue availableDates={productSelected.availableDates} />
             </div>
             </Grid>
