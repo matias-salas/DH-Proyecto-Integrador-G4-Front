@@ -80,11 +80,7 @@ const ItemList = ({ prod }) => {
 
       <div>
         <div className="cards-cat">
-          {showBackButtonLocal && (
-            <button onClick={handleBack} className="back-cat">
-              Volver
-            </button>
-          )}
+
           <div className="category-container">
             {items.map((element) => (
               <div key={element.id} onClick={handleClick}>
