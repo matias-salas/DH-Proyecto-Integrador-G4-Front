@@ -66,7 +66,12 @@ const ItemList = ({ prod }) => {
           onChange={handleChange}
           className="input-barra"
         />
-        <DateRangeComp onConfirm={handleDateConfirm} />
+
+        <div className="DateText">
+          <span>Buscar: Desde/Hasta </span>
+          <DateRangeComp onConfirm={handleDateConfirm} />
+
+        </div>
       </div>
 
       <div>
@@ -85,7 +90,7 @@ const ItemList = ({ prod }) => {
           </div>
           <br />
         </div>
-
+            
         <div className="cards-container">
           {filteredItems.length > 0 ? (
             filteredItems.map((element) => (

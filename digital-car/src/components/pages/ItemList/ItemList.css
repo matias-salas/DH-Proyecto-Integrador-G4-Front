@@ -1,11 +1,22 @@
 .cards-container {
   display: flex;
   flex-wrap: wrap;
-  /* grid-template-columns: auto auto; */
-  grid-gap: 30px;
-  place-content: center;
-  height: 100%;
+  justify-content: center; /* Asegura que los elementos estén centrados */
+  gap: 30px; /* Espacio entre tarjetas */
+
 }
+
+@media screen and (max-width: 768px) {
+  .cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Asegura que los elementos estén centrados */
+    gap: 30px; /* Espacio entre tarjetas */
+    margin-top: 85px;
+  }
+}
+
+
 .container-menu {
   margin: 100px 0 140px 0;
 }
@@ -52,12 +63,13 @@
   align-items: center;
   width: 100%;
   padding: 0 20px;
-  height: 64px;
+  height: 74px;
   background-color: var(--color-four); /* Ajustar al color primario para consistencia */
   position: fixed;
   top: 1000; /* Asegurar que esté en la parte superior */
   z-index: 10; /* Para que no se superponga con otros elementos */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra sutil para dar profundidad */
+
 }
 
 .input-barra{
@@ -127,9 +139,32 @@ input.InputBox:focus {
   background-color: var(--color-form-background);
 }
 
-
+.DateText{
+  font-size: 18px;
+  color: var(--color-text);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 10px;
+  border: 2px solid var(--color-secondary);
+  background-color: var(--color-two);
+  border-radius: 4px;
+  padding: 8px 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  
+}
 
 @media (max-width: 800px) {
+
+  .container-menu {
+    margin: 100px 0 140px 0;
+  }
+  
+  .DateText{
+    font-size: 16px;
+    flex-direction: column;
+  }
 
 
   .barrabusqueda {

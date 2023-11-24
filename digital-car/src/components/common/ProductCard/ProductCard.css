@@ -1,20 +1,31 @@
 
   .product-card {
-    width: 572px;
-    height: 358px;
-    margin-top: 20px;
+    max-width: 100%; /* Ancho máximo del 100% para adaptabilidad */
+    margin: 20px auto; /* Margen superior e inferior con centrado automático */
     border-radius: 10px;
     border: 1px solid var(--color-one);
-    /* flex-basis: calc(35% - 16px); */
-    margin: 3%;
     background-color: rgb(241, 241, 241);
   }
   
+  @media screen and (max-width: 768px) {
+    .product-card {
+      flex-basis: 100%; /* Ocupar todo el ancho en pantallas pequeñas */
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .product-card {
+      /* Ajustes adicionales para pantallas aún más pequeñas */
+    }
+  }
+  
+  /* Ajustes adicionales para otros elementos si es necesario */
+  
   
   .product-card img {
-    width: 570px;
-    height: 265px;
-    border-radius: 20px 20px 0 0 ;
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px 20px 0 0;
     object-fit: cover;
   }
   
