@@ -3,13 +3,12 @@ import ProductCard from "../../common/ProductCard/ProductCard";
 import CategoryCard from "../../common/CategoryCard/CategoryCard";
 import { categories } from "../../../categoriesMock";
 import { useLocalFetch } from "../../hooks/useLocalFetch";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import DateRangeComp from "../../daterangepicker/DateRange";
 import { faCalendarAlt } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import NotFound from "../../common/NotFound/NotFound";
-
 
 const ItemList = ({ prod }) => {
   const { categoryName } = useParams();
@@ -18,6 +17,7 @@ const ItemList = ({ prod }) => {
   // const [productos, setProductos] = useState(prod);
   const navigate = useNavigate();
   const { items } = useLocalFetch([], categories);
+  const [filteredItems, setFilteredItems] = useState([]);
   const handleClick = () => {
     setShowBackButtonLocal(true);
   };
@@ -27,8 +27,9 @@ const ItemList = ({ prod }) => {
   };
 
   const handleChange = (e) => {
-    setBusqueda(e.target.value);
-    filteredItems(e.target.value);
+    const inputValue = e.target.value;
+    setBusqueda(inputValue);
+    filteredItems(inputValue);
   };
   // const filtrar = (terminoBusqueda) => {
   //   let resultadosBusqueda = prod.filter((e)=>{
@@ -38,16 +39,31 @@ const ItemList = ({ prod }) => {
   //   setProductos(resultadosBusqueda)
   //   console.log(productos);
   // }
-  const filteredItems = prod.filter((item) => {
-    
-    return (
-      (categoryName ? item.type === categoryName : true) &&
-      (item.marca.toLowerCase().includes(busqueda.toLowerCase()) ||
-        item.type.toLowerCase().includes(busqueda.toLowerCase()) ||
-        item.price.toString().toLowerCase().includes(busqueda.toLowerCase()) ||
-        item.year.toString().toLowerCase().includes(busqueda.toLowerCase()))
-    );
-  });
+  // const filteredItems = prod.filter((item) => {
+
+  //   return (
+  //     (categoryName ? item.type === categoryName : true) &&
+  //     (item.marca.toLowerCase().includes(busqueda.toLowerCase()) ||
+  //       item.type.toLowerCase().includes(busqueda.toLowerCase()) ||
+  //       item.price.toString().toLowerCase().includes(busqueda.toLowerCase()) ||
+  //       item.year.toString().toLowerCase().includes(busqueda.toLowerCase()))
+  //   );
+  // });
+  useEffect(() => {
+    const filtered = prod.filter((item) => {
+      return (
+        (!categoryName || item.type === categoryName) &&
+        (item.marca.toLowerCase().includes(busqueda.toLowerCase()) ||
+          item.type.toLowerCase().includes(busqueda.toLowerCase()) ||
+          item.price
+            .toString()
+            .toLowerCase()
+            .includes(busqueda.toLowerCase()) ||
+          item.year.toString().toLowerCase().includes(busqueda.toLowerCase()))
+      );
+    });
+    setFilteredItems(filtered);
+  }, [busqueda, categoryName, prod]);
 
   return (
     <div className="container-menu">
@@ -55,8 +71,9 @@ const ItemList = ({ prod }) => {
         <input
           type="text"
           value={busqueda}
-          placeholder="Buscar por marca, modelo, año..."
+          placeholder="Buscar por marca, modelo, año, precio..."
           onChange={handleChange}
+          className="input-barra"
         />
       </div>
       <div className="App">
@@ -86,13 +103,13 @@ const ItemList = ({ prod }) => {
         </div>
 
         <div className="cards-container">
-        {filteredItems.length > 0 ? (
-          filteredItems.map((element) => (
-            <ProductCard key={element.id} element={element} />
-          ))
-        ) : (
-          <NotFound />
-        )}
+          {filteredItems.length > 0 ? (
+            filteredItems.map((element) => (
+              <ProductCard key={element.id} element={element} />
+            ))
+          ) : (
+            <NotFound />
+          )}
         </div>
       </div>
     </div>

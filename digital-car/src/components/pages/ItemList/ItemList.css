@@ -7,7 +7,7 @@
   height: 100%;
 }
 .container-menu {
-  margin: 164px 0 140px 0;
+  margin: 100px 0 140px 0;
 }
 .cards-cat {
   background-color: var(--color-five);
@@ -45,10 +45,40 @@
   background-color: var(--color-six);
 }
 
-.h4 {
-  margin-left: 24px;
-  margin-top: 10px;
+
+.barrabusqueda{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 0 20px 0 20px;
+  height: 64px;
+  background-color: var(--color-two);
 }
+
+.input-barra{
+  width: 660px;
+  height: 39px;
+  padding: 10px 0 10px 50px;
+  border: none;
+  background: #FFFFFF26;
+  color: white;
+  border-radius: 4px;
+  
+}
+.input-barra:focus {
+  outline: none; 
+}
+.input-barra:hover{
+  background-color:  #fcfcfc43;
+}
+
+.input-barra::placeholder{
+  color: #efefef8e;
+  font-weight: bold;
+}
+
+
 
 .calendar {
   margin-left: 10px;
