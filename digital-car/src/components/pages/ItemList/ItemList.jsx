@@ -1,4 +1,4 @@
-import { useState, useEffect, useContext } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import DateRangeComp from "../../daterangepicker/DateRange";
 import NotFound from "../../common/NotFound/NotFound";
@@ -7,7 +7,6 @@ import CategoryCard from "../../common/CategoryCard/CategoryCard";
 import { useLocalFetch } from "../../hooks/useLocalFetch";
 import { categories } from "../../../categoriesMock";
 import "./ItemList.css";
-import { UserContext } from "../../../context/UserContext";
 
 const ItemList = ({ prod }) => {
   const { categoryName } = useParams();
@@ -18,8 +17,6 @@ const ItemList = ({ prod }) => {
   const { items } = useLocalFetch([], categories);
   const [filteredItems, setFilteredItems] = useState([]);
 
-  const { currentUser } = useContext(UserContext);
-  console.log(currentUser)
   const handleClick = () => {
     setShowBackButtonLocal(true);
   };
@@ -50,6 +47,7 @@ const ItemList = ({ prod }) => {
   
       return (!categoryName || item.type === categoryName) &&
              (item.marca.toLowerCase().includes(busqueda.toLowerCase()) ||
+              item.title.toLowerCase().includes(busqueda.toLowerCase()) ||
               item.type.toLowerCase().includes(busqueda.toLowerCase()) ||
               item.price.toString().toLowerCase().includes(busqueda.toLowerCase()) ||
               item.year.toString().toLowerCase().includes(busqueda.toLowerCase())) &&

@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCaretLeft, faUser, faCar, faShieldHalved, faSuitcase, faSnowflake, faGear } from "@fortawesome/free-solid-svg-icons";
@@ -82,7 +82,7 @@ const VerDetalles = () => {
                 <div className='descripcion'>
                   <h2>Descripción</h2>
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum dolores cum numquam officiis quisquam ducimus facilis rem alias eveniet. Asperiores nulla quo est ducimus adipisci dolores aliquam neque incidunt? Maxime.</p>
-                  <Button variant="contained" style={{ zIndex: 1 }}>Ver disponibilidad</Button>
+                  <Button variant="contained" style={{ zIndex: 1 }} onClick={() => setScrollToCalendar(true)}>Ver disponibilidad</Button>
                 </div>
               </div>
             </Grid>
