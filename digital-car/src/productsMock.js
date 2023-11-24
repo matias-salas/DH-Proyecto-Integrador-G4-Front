@@ -20,7 +20,7 @@ export const products = [
     price: 3000,
     year: 2020,
     img: "https://images.prd.kavak.io/eyJidWNrZXQiOiJrYXZhay1pbWFnZXMiLCJrZXkiOiJpbWFnZXMvMjg2ODg5L0VYVEVSSU9SLWZyb250U2lkZVBpbG90TmVhci0xNzAwNTkwOTQ3NTEyLmpwZWciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjgxMCwiaGVpZ2h0Ijo0NjV9fX0=",
-    availableDates: generateRandomDates(),
+    availableDates: ['2024-01-13', '2023-11-29', '2024-01-01', '2023-11-24', '2024-01-09', '2024-01-13', '2024-01-13', '2024-01-14', '2024-01-16', '2024-01-05', '2024-01-02', '2024-01-02', '2023-11-24', '2023-11-28', '2024-01-04', '2024-01-18', '2023-11-28', '2024-01-06', '2024-01-23', '2024-01-20', '2024-01-03', '2023-11-26', '2024-01-09', '2024-01-03', '2024-01-16', '2024-01-03', '2024-01-08', '2023-11-28', '2023-11-28', '2024-01-08', '2024-01-21', '2024-01-06', '2024-01-09', '2024-01-04', '2023-11-26', '2024-01-15', '2024-01-07'],
 
   },
   {
@@ -64,7 +64,7 @@ export const products = [
     price: 3000,
     year: 2019,
     img: "https://images.prd.kavak.io/eyJidWNrZXQiOiJrYXZhay1pbWFnZXMiLCJrZXkiOiJpbWFnZXMvMjc5OTYwL0VYVEVSSU9SLWZyb250U2lkZVBpbG90TmVhci0xNjk2NDM4NDU0MzEzLmpwZWciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjgxMCwiaGVpZ2h0Ijo0NjV9fX0=",
-    availableDates: generateRandomDates(),
+    availableDates: ['2024-01-13', '2023-11-29', '2024-01-01', '2023-11-24', '2024-01-09', '2024-01-13', '2024-01-13', '2024-01-14', '2024-01-16', '2024-01-05', '2024-01-02', '2024-01-02', '2023-11-24', '2023-11-28', '2024-01-04', '2024-01-18', '2023-11-28', '2024-01-06', '2024-01-23', '2024-01-20', '2024-01-03', '2023-11-26', '2024-01-09', '2024-01-03', '2024-01-16', '2024-01-03', '2024-01-08', '2023-11-28', '2023-11-28', '2024-01-08', '2024-01-21', '2024-01-06', '2024-01-09', '2024-01-04', '2023-11-26', '2024-01-15', '2024-01-07'],
 
   },
   {
