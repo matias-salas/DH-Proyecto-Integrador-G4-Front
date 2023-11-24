@@ -80,12 +80,13 @@ const VerDetalles = () => {
 
             <Grid item xs={12} s={6} md={4}>
               <div className='caracteristicas'>
-                <h1 className='tittle-year'>{productSelected.title}</h1>
+                <h1 className='tittle-year'>{productSelected.title} - {productSelected.model} ({productSelected.year})</h1>
+                <h2 className='type'>{productSelected.type}</h2>
                 <h1 className='price'>$ {productSelected.price}</h1>
 
                 <div className='descripcion'>
                   <h2>Descripción</h2>
-                  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum dolores cum numquam officiis quisquam ducimus facilis rem alias eveniet. Asperiores nulla quo est ducimus adipisci dolores aliquam neque incidunt? Maxime.</p>
                   <Button variant="contained" style={{ zIndex: 1 }}>Ver disponibilidad</Button>
                 </div>
               </div>
@@ -127,8 +128,6 @@ const VerDetalles = () => {
               </Grid>
 
             </Grid>
-
-
 
           </div>
           <hr />

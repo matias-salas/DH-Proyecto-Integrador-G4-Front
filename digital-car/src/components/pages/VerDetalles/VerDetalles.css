@@ -91,7 +91,7 @@ body {
 }
 
 .caracteristicas{
-    text-align: right;
+    text-align: left;
     
 }
 
@@ -154,6 +154,20 @@ body {
   .reserva-descripcion p {
     margin-bottom: 20px; /* ajusta según sea necesario */
   }
+
+
+  @media screen and (min-width: 1500px) {
+
+    .imagen-principal {
+        order: 2;
+    }
+
+    .imagenes-secundarias {
+        order: 1;
+
+    }
+}
+
 
 @media screen and (max-width: 968px) {
     .container-details {
