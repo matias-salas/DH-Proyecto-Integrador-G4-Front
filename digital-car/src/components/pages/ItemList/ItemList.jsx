@@ -1,68 +1,61 @@
-import "./ItemList.css";
-import ProductCard from "../../common/ProductCard/ProductCard";
-import CategoryCard from "../../common/CategoryCard/CategoryCard";
-import { categories } from "../../../categoriesMock";
-import { useLocalFetch } from "../../hooks/useLocalFetch";
 import { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import DateRangeComp from "../../daterangepicker/DateRange";
 import NotFound from "../../common/NotFound/NotFound";
+import ProductCard from "../../common/ProductCard/ProductCard";
+import CategoryCard from "../../common/CategoryCard/CategoryCard";
+import { useLocalFetch } from "../../hooks/useLocalFetch";
+import { categories } from "../../../categoriesMock";
+import "./ItemList.css";
 
 const ItemList = ({ prod }) => {
   const { categoryName } = useParams();
   const [showBackButtonLocal, setShowBackButtonLocal] = useState(false);
   const [busqueda, setBusqueda] = useState("");
-  // const [productos, setProductos] = useState(prod);
+  const [confirmedDateRange, setConfirmedDateRange] = useState({ startDate: null, endDate: null });
   const navigate = useNavigate();
   const { items } = useLocalFetch([], categories);
   const [filteredItems, setFilteredItems] = useState([]);
+
   const handleClick = () => {
     setShowBackButtonLocal(true);
   };
+
   const handleBack = () => {
     setShowBackButtonLocal(false);
     navigate(-1);
   };
 
   const handleChange = (e) => {
-    const inputValue = e.target.value;
-    setBusqueda(inputValue);
-    filteredItems(inputValue);
+    setBusqueda(e.target.value);
   };
-  // const filtrar = (terminoBusqueda) => {
-  //   let resultadosBusqueda = prod.filter((e)=>{
-  //     if(e.marca.toString().toLowerCase().includes(terminoBusqueda.toLowerCase()) || e.type.toString().toLowerCase().includes(terminoBusqueda.toLowerCase()) || e.price.toString().toLowerCase().includes(terminoBusqueda) || e.year.toString().toLowerCase().includes(terminoBusqueda))
-  //     return e;
-  //   })
-  //   setProductos(resultadosBusqueda)
-  //   console.log(productos);
-  // }
-  // const filteredItems = prod.filter((item) => {
 
-  //   return (
-  //     (categoryName ? item.type === categoryName : true) &&
-  //     (item.marca.toLowerCase().includes(busqueda.toLowerCase()) ||
-  //       item.type.toLowerCase().includes(busqueda.toLowerCase()) ||
-  //       item.price.toString().toLowerCase().includes(busqueda.toLowerCase()) ||
-  //       item.year.toString().toLowerCase().includes(busqueda.toLowerCase()))
-  //   );
-  // });
+  const handleDateConfirm = (startDate, endDate) => {
+    setConfirmedDateRange({ startDate, endDate });
+  };
+
   useEffect(() => {
     const filtered = prod.filter((item) => {
-      return (
-        (!categoryName || item.type === categoryName) &&
-        (item.marca.toLowerCase().includes(busqueda.toLowerCase()) ||
-          item.type.toLowerCase().includes(busqueda.toLowerCase()) ||
-          item.price
-            .toString()
-            .toLowerCase()
-            .includes(busqueda.toLowerCase()) ||
-          item.year.toString().toLowerCase().includes(busqueda.toLowerCase()))
-      );
+      // Comprobar si alguna fecha del ítem está dentro del rango seleccionado
+      const isDateWithinRange = (date) => {
+        const itemDate = new Date(date);
+        return (!confirmedDateRange.startDate || itemDate >= confirmedDateRange.startDate) &&
+               (!confirmedDateRange.endDate || itemDate <= confirmedDateRange.endDate);
+      };
+  
+      const hasDateWithinRange = item.availableDates.some(isDateWithinRange);
+  
+      return (!categoryName || item.type === categoryName) &&
+             (item.marca.toLowerCase().includes(busqueda.toLowerCase()) ||
+              item.type.toLowerCase().includes(busqueda.toLowerCase()) ||
+              item.price.toString().toLowerCase().includes(busqueda.toLowerCase()) ||
+              item.year.toString().toLowerCase().includes(busqueda.toLowerCase())) &&
+             hasDateWithinRange;
     });
     setFilteredItems(filtered);
-  }, [busqueda, categoryName, prod]);
-
+  }, [busqueda, categoryName, prod, confirmedDateRange]);
+  
+  
   return (
     <div className="container-menu">
       <div className="barrabusqueda">
@@ -73,10 +66,7 @@ const ItemList = ({ prod }) => {
           onChange={handleChange}
           className="input-barra"
         />
-
-        
-          <DateRangeComp />
-        
+        <DateRangeComp onConfirm={handleDateConfirm} />
       </div>
 
       <div>
@@ -87,13 +77,11 @@ const ItemList = ({ prod }) => {
             </button>
           )}
           <div className="category-container">
-            {items.map((element) => {
-              return (
-                <div key={element.id} onClick={handleClick}>
-                  <CategoryCard element={element} />
-                </div>
-              );
-            })}
+            {items.map((element) => (
+              <div key={element.id} onClick={handleClick}>
+                <CategoryCard element={element} />
+              </div>
+            ))}
           </div>
           <br />
         </div>

@@ -13,7 +13,6 @@ input.inputBox{
 
 .calendarWrap {
     display: inline-block;
-    
 }
 
 .calendaElement {
@@ -24,3 +23,11 @@ input.inputBox{
     border: 1px solid #ccc;
     z-index: 999;
 }
+
+.calendarContainer {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000; /* Asegúrate de que el z-index sea alto para que aparezca sobre otros elementos */
+}
+
