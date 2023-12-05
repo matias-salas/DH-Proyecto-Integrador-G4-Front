@@ -153,7 +153,9 @@ const VerDetalles = () => {
               <div className="reserva-descripcion">
                 <h3>Detalles de la Reserva</h3>
                 <p>Aquí puedes confirmar las fechas de tu reserva.</p>
+                <Link to={"/detallesReserva"}>
                 <Button variant="contained" color="primary">Confirmar Reserva</Button>
+                </Link>
               </div>
             </Grid>
           </Grid>
