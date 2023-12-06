@@ -2,7 +2,7 @@
 
 
 .reserva-card{
-height: 200px;
+height: 800px;
 margin-top: 100px;
 box-sizing: border-box;
 width: 100%;
@@ -10,4 +10,45 @@ justify-content: center;
 text-align: center;
 padding: 20px;
 color: var(--color-three);
+}
+
+.card-details{
+    color: var(--color-three);
+    display: flex;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+.datos-usuario{
+    display: block;
+    border-left: 2px solid var(--color-three);
+    padding:20px;
+    width: 50%;
+    text-align: center;
+}
+
+.car-details{
+display: block;
+width: 50%;
+text-align: center;
+padding: 20px;
+}
+
+.reserva-card img{
+    max-width: 40%;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.caracteristicas{
+    margin: 20px;
+}
+
+ button{
+    border: solid 1px var(--color-three);
+    box-shadow: none;
+    border-radius: 3px;
+    margin-top: 50px;
+    color: var(--color-three);
 }
